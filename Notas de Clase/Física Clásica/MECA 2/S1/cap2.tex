@@ -1,0 +1,137 @@
+\documentclass[../main]{subfiles}
+
+\begin{document}
+\section{Cálculo de las variaciones}
+El cálculo de variaciones se ocupa del problema de determinar extremos: máximos o mínimos de funcionales.
+\subsection{Funcional}
+Es una aplicación de funciones sobre el conjunto de números reales. Es decir, asocia una función de cierta clase con un número real.
+\begin{align*}
+    \text{espacio de funciones } \rightarrow \mathbb{R}
+\end{align*}
+Un ejemplo simple de funcional es la distancia entre dos puntos.
+
+\begin{InfoBox}[ht]
+\centering
+\fbox{\centering\medskip
+  \includegraphics[width=2in]{Física Clásica/MECA 2/temp/placeholder.png}}\par
+  \caption{Imagen temporal\label{fg:A}}  
+\end{InfoBox}
+
+\begin{align*}
+    \dd{s}=\sqrt{\dd{x}^2+\dd{y}^2}=\sqrt{1+\left(\dv[2]{y}{x}\right)}dx
+\end{align*}
+
+Entonces el funcional de $y$ es:
+\begin{align}
+    S[y]=\int_{x_{1}}^{x_{2}}\sqrt{1+{y'}^{2}}\dd{x}
+\end{align}
+
+Un funcional genérico será:
+\begin{align}
+    J[y]=\int_{x_{1}}^{x_{2}}f\left(y\left(x\right),\ y'\left(x\right),\ x\right)\dd{x},
+\end{align}
+
+\hangindent=0.7cm donde $y$ es una función y también argumento del funcional J.
+
+El problema del cálculo variacional consiste en determinar para qué función $y(x)$ el funcional $J(y)$ asume un valor extremo: un máximo o un mínimo.\\
+Sea:
+
+\noindent\begin{minipage}{.45\textwidth}
+\begin{align*}
+    &\Bar{y}(x)=y(x)+\epsilon\eta (x),\\
+    &\epsilon \rightarrow \text{ número real},\\
+    &\eta\left(x_1\right)=\eta\left(x_2\right)=0,\\
+    &\eta\left(x\right)\rightarrow \text{ función continua y diferenciable}
+\end{align*}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+  \centering
+  \rule{4cm}{3cm}
+  \captionof{figure}{Imagen temporal}
+  \label{fig:figure}
+\end{minipage}
+
+Calculando:
+\begin{align*}
+    J[\Bar{y}]=\int_{x_{1}}^{x_{2}}f\left(\Bar{y}\left(x\right),\ \Bar{y}'\left(x\right),\ x\right)\dd{x}=\phi(\epsilon)
+\end{align*}
+
+$\displaystyle\epsilon=0\Rightarrow J\left[\Bar{y}\right]$ es máximo o mínimo, esto implica decir que $\phi(\epsilon)$ es máximo o mínimo.\\[6pt]
+Luego: $\displaystyle\dv{\phi}{\epsilon}\Big|_{\epsilon=0}=0$
+\begin{align*}
+    \dv{\phi(\epsilon)}{\epsilon}\Big|_{\epsilon=0}&=\int_{x_{1}}^{x_{2}} \left(\pdv{f}{\Bar{y}}\pdv{\Bar{y}}{\epsilon}+\pdv{f}{\Bar{y'}}\pdv{\Bar{y'}}{\epsilon}\right)_{\epsilon=0} \dd{x}=0\\
+    &=\int_{x_{1}}^{x_{2}} \left(\pdv{f}{y}\eta+\pdv{f}{y'}\eta'\right)\dd{x}
+\end{align*}
+Si $\displaystyle y(x)$ extremiza $\displaystyle J\left[y\right]$, entonces:
+\begin{align*}
+    \dv{\phi}{\epsilon}\Big|_{\epsilon=0}=0\text{. Esto es }\int_{x_{1}}^{x_{2}}\left(\pdv{f}{y}\eta+\pdv{f}{y'}\eta\right)\dd{x}=0
+\end{align*}
+Realizando una integración por partes en la relación:
+\begin{align*}
+    \int_{x_{1}}^{x_{2}} \underbrace{\pdv{f}{y'}}_u \underbrace{\vphantom{\left(\frac{a^{0.3}}{b}\right)} \eta'\dd{x}}_{\dd{v}}=\underbrace{\pdv{f}{y'}\eta\Big|_{x_1}^{x_2}}_{0} -\int_{x_{1}}^{x_{2}} \eta\dv{}{x}\left(\pdv{f}{y'}\right)\dd{x}
+\end{align*}
+Entonces:
+\begin{align*}
+    \int_{x_{1}}^{x_{2}}\underbrace{\left[\pdv{f}{y}-\dv{}{x}\left(\pdv{f}{y'}\right)\right]}_{M(x)}\eta\dd{x}=0 \rightarrow \int_{x_{1}}^{x_{2}} M(x)\eta(x)\dd{x}=0
+\end{align*}
+
+\noindent\begin{minipage}{.45\textwidth}
+  \centering
+  \rule{4cm}{3cm}
+  \captionof{figure}{Imagen temporal}
+  \label{fig:figure}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\begin{align*}
+    \rightarrow M(x)\text{ debe ser nula para cualquier }\eta(x).
+\end{align*}
+\tikzstyle{background rectangle}=[thin,draw=black]
+\begin{tikzpicture}[show background rectangle]
+
+\node[align=justify, text width=\textwidth, inner sep=1em]{
+\begin{align*}
+    \pdv{f}{y}=\dv{}{x}\left(\pdv{f}{y'}\right)=0
+\end{align*}
+};
+
+\node[xshift=3ex, yshift=-0.7ex, overlay, fill=white, draw=white, above 
+right] at (current bounding box.north west) {
+\textit{Ecuación de Euler (1744)}
+};
+
+\end{tikzpicture} 
+\end{minipage}
+
+\section{Problema de la braquistócrona}
+
+\noindent\begin{minipage}{.45\textwidth}
+La idea está en encontrar una curva por la cual una partícula se desliza recorriendo el menor tiempo por conservación de energía.
+\begin{align*}
+    &mgy=\frac{1}{2}mv^2\rightarrow v=\sqrt{2gy}\\
+    &v=\dv{s}{t}\rightarrow \dd{t}=\dv{s}{v}=\frac{\dd{s}}{\sqrt{2gy}}=\\
+    &\dd{t}=\frac{\sqrt{\dd{x}^{2}+\dd{y}^{2}}}{\sqrt{2gy}}
+\end{align*}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+  \centering
+  \rule{4cm}{3cm}
+  \captionof{figure}{Imagen temporal}
+  \label{fig:figure}
+\end{minipage}
+
+Curva: $\displaystyle y=y(x) \rightarrow \dd{t}=\frac{\sqrt{1+{y'}^2}}{\sqrt{2gy}}$\\
+Entonces el funcional:
+\begin{align*}
+    T[y]=\int_{0}^{x_{2}} \underbrace{\frac{\sqrt{1+{y'}^2}}{\sqrt{2gy}}}_{f(y,y',x)\rightarrow\text{Ecuación que depende de } y',y',x}\dd{x}\\
+    \pdv{f}{y}-\dv{}{x}\left(\pdv{f}{y'}\right)=0
+\end{align*}
+Buscando una curva que dependa de $y$: $x=x(y)$
+\begin{align*}
+    T[x]=\frac{1}{\sqrt{2g}}\int_{0}^{y_{2}} \underbrace{\frac{\sqrt{1+{x'}^2} }{\sqrt{y} }}_{f}\dd{y}
+\end{align*}
+Ecuación de Euler:
+\begin{align*}
+    \underbrace{\pdv{f}{x}}_{0}-\dv{}{y}\left(\pdv{f}{x'}\right)=0\rightarrow \pdv{f}{x'}=c_1
+\end{align*}
+Entonces: $\displaystyle \frac{x'}{\sqrt{1+{x'}^2}\sqrt{y} }=c_1$
+\end{document}

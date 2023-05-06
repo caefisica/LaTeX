@@ -1,0 +1,247 @@
+\documentclass[../main]{subfiles}
+\begin{document}
+\chapter{Transformación de velocidades}
+
+Tenemos las siguientes ecuaciones:
+
+\begin{align}
+    x&=\gamma(x'+vt') \nonumber \\
+    y&=y' \nonumber \\
+    t&=\gamma\left(t'+\dfrac{vx'}{c^2}\right) \nonumber \\
+    \gamma&=\dfrac{1}{\sqrt{1-\dfrac{v^2}{c^2}}}
+    \label{tv1}
+\end{align}
+
+Supongamos que las componentes de la velocidad de un objeto que son medidas en $S'$, son $u_x^{'}$ y $u_y^{'}$. Según la definición de velocidad tenemos que:
+
+\begin{equation}
+     u_x^{'}=\dfrac{dx'}{dt'}, \quad u_y^{'}=\dfrac{dy'}{dt'}
+     \label{tv2}
+\end{equation}
+
+Derivando las ecuaciones \eqref{tv1}, obtenemos que:
+
+\begin{align*}
+    dx&=\gamma(u_x^{'}+v)dt' \\
+    dy&=u_y^{'}dt' \\
+    dt&=\gamma\left( 1+\dfrac{vu_x^{'}}{c^2} \right)dt'
+\end{align*}
+
+Por lo tanto, tenemos que:
+
+\begin{align}
+    u_x&=\dfrac{dx}{dt}=\dfrac{u'_x+v}{1+\dfrac{vu'_x}{c^2}} &\ u'_x&=\dfrac{u_x-v}{1-\dfrac{vu_x}{c^2}} \\
+    u_y&=\dfrac{dy}{dt}=\dfrac{\dfrac{u'_y}{\gamma}}{{1+\dfrac{vu'_x}{c^2}}} &\ u'_y&= \dfrac{\dfrac{u_y}{\gamma}}{{1+\dfrac{vu_x}{c^2}}}
+\end{align}
+
+\chapter{Ejemplos}
+
+\section{Radiación de una fuente que se mueve rápidamente}
+
+\begin{equation*}
+    \Delta t=\dfrac{l}{c-fv}-\dfrac{l}{c+fv}\approx \dfrac{2lfv}{c^2}
+\end{equation*}
+
+\begin{align*}
+    l&=2,76\text{m}, \quad \lambda=4,74\times 10^{-7} \text{m}, \\
+    v&=37,5\ \dfrac{\text{m}}{\text{sec}} (\beta =1,25 \times 10^{-7})
+\end{align*}
+
+\begin{equation*}
+    \pi^{0} \rightarrow \gamma_1+\gamma_2
+\end{equation*}
+
+\section{Aberración estelar}
+
+\begin{equation*}
+    u'_y=\dfrac{\dfrac{u_y}{\gamma}}{1-v\dfrac{u_z}{c^2}}
+\end{equation*}
+
+\begin{equation*}
+    u'_y=\dfrac{u_y}{\gamma}, \quad (\text{siendo} \ u_z=0)
+\end{equation*}
+
+\begin{align*}
+    u'_x=\dfrac{-(c\cos{\theta}+v)}{1+v\dfrac{\cos{\theta}}{c}} \qquad u'_y=\dfrac{-c\sin{\theta}}{\gamma(1+v\dfrac{\cos{\theta}}{c})}
+\end{align*}
+
+\begin{equation*}
+    \cos{\theta'}=\dfrac{-u'_x}{c}=\dfrac{\cos{\theta}+\dfrac{v}{c}}{1+v\dfrac{\cos{\theta}}{c}}
+\end{equation*}
+
+\begin{equation*}
+    \cos{\theta'}=\dfrac{\cos{\theta}+\beta}{1+\beta \cos{\theta}}
+\end{equation*}
+
+\begin{equation*}
+    \cos{\theta'}\approx (\cos{\theta}+\beta)(1-\beta \cos{\theta})
+\end{equation*}
+
+\begin{equation*}
+    \cos{\theta'}\approx \cos{\theta}+\beta \sin^2{\theta}
+\end{equation*}
+
+\begin{equation*}
+    \theta'=\theta-\alpha
+\end{equation*}
+
+\begin{equation*}
+    \cos{\theta'}=\cos{\theta}\cos{\alpha}+\sin{\theta}\sin{\alpha}
+\end{equation*}
+
+\begin{equation*}
+    \cos{\theta'}\approx \cos{\theta}+\alpha \sin{\theta}
+\end{equation*}
+
+\begin{equation*}
+    \alpha \approx \beta \sin{\theta}
+\end{equation*}
+
+\section{Efecto Doppler}
+
+\begin{equation*}
+    \lambda '=(w-u_1)\tau=\dfrac{w-u_1}{v}
+\end{equation*}
+
+\begin{equation*}
+    \tau '=\dfrac{\lambda '}{w-u_2}=\dfrac{w-u_1}{v(w-u_2)}
+\end{equation*}
+
+\begin{equation}
+    v'=v \dfrac{w-u_2}{w-u_1}=v\dfrac{1-\dfrac{u_2}{w}}{1-\dfrac{u_1}{w}}
+\end{equation}
+
+\begin{itemize}
+    \item[(a)] La fuente esta en reposo y el receptor en movimiento:
+        \begin{equation}
+            (u_1=0, u_2=v) \qquad v'=v\left(1 - \dfrac{v}{w}\right)=v(1-\beta)
+        \end{equation}
+    \item[(b)] La fuente está en movimiento y el receptor en reposo:
+        \begin{equation}
+            (u_1=-v, u_2=0) \qquad v'=\dfrac{v}{1+\dfrac{v}{w}}=\dfrac{v}{1+\beta}
+        \end{equation}
+\end{itemize}
+
+\begin{align*}
+    x_1&=ct_1=x_0+vt_1 \\
+    x_2&=c(t_2-n \tau)=x_0+vt_2
+\end{align*}
+
+\begin{align*}
+    t_2-t_1&=\dfrac{cn \tau}{c-v} \\
+    x_2-x_1&=\dfrac{vcn \tau}{c-v}
+\end{align*}
+
+\begin{align}
+    t'_2-t'_1&=\gamma\left[ (t_2-t_1)- \dfrac{v}{c}(x_2-x_1) \right] \tag{por T. Lorentz} \\
+    t'_2-t'_1&=\gamma \left(  \dfrac{cn \tau}{c-v}-\dfrac{v}{c^2}\dfrac{vcn \tau}{c-v} \right) \nonumber
+\end{align}
+
+\begin{align}
+    \tau'&=\dfrac{\gamma c\tau}{c-v} \left( 1-\dfrac{v^2}{c^2}\right) \nonumber \\
+    \tau'&=\dfrac{\gamma(1-\beta^2)}{1-\beta}\tau \tag{$v/c=\beta$} \\
+    \tau'&=\gamma(1+\beta)\tau \nonumber
+\end{align}
+
+\begin{equation*}
+    \gamma=(1-\beta^2)^{-1/2}
+\end{equation*}
+
+\begin{equation}
+    \tau'=\tau \left( \dfrac{1+\beta}{1-\beta} \right)^{1/2} 
+\end{equation}
+
+\begin{equation}
+    v'=v \left( \dfrac{1-\beta}{1+\beta} \right)^{1/2}
+\end{equation}
+
+\begin{equation*}
+    \lambda'=c \tau'=c \tau \left( \dfrac{1+\beta}{1-\beta} \right)^{1/2}=\lambda \left( \dfrac{1+\beta}{1-\beta}\right)^{1/2}
+\end{equation*}
+
+\begin{equation}
+    \beta=\dfrac{\left(\dfrac{\lambda'}{\lambda}\right)^{2}-1}{\left(\dfrac{\lambda'}{\lambda}\right)^{2}+1}
+\end{equation}
+
+\begin{equation*}
+    \beta=\dfrac{0,46}{2,46}\approx 0,2
+\end{equation*}
+
+\begin{equation*}
+    \tau=0,2c \approx 6 \times 10^7 m/s
+\end{equation*}
+
+\chapter{Efecto Doppler y dilatación del tiempo}
+
+\section{Corrimiento al rojo de las galaxias lejanas}
+\begin{itemize}
+    \item[\textbf{A.}]  \textbf{Evidencia Universo en expansión}
+    \item[\textbf{B.}]  \textbf{Ley de Hubble}
+\end{itemize}
+
+\begin{equation*}
+    x=vt \qquad \qquad y=h
+\end{equation*}
+
+\begin{equation*}
+    t_2-t_1=\tau \gamma=\dfrac{\gamma}{v}
+\end{equation*}
+
+\begin{align*}
+    \tau'&=t_2+\dfrac{r_2}{c}-t_1-\dfrac{r_1}{c} \\
+    \tau'&=\tau \gamma -\dfrac{(r_1-r_2)}{c}
+\end{align*}
+
+\begin{align*}
+    r_1-r_2&\approx (x_2-x_1)\cos{\theta} \\
+    r_1-r_2&=\tau \gamma v \cos{\theta}
+\end{align*}
+
+\begin{equation*}
+    \tau'=\tau \gamma\left( 1-v\dfrac{\cos{\theta}}{c}\right)
+\end{equation*}
+
+\begin{equation*}
+    v'=\dfrac{v}{\gamma(1-\beta \cos{\theta})}
+\end{equation*}
+
+\begin{equation}
+    v'=v \dfrac{(1-\beta^2)^{1/2}}{1-\beta \cos{\theta}}
+\end{equation}
+
+\begin{equation}
+    \cos{\theta}=\dfrac{-vt}{(h^2+v^2t^2)^{1/2}}
+\end{equation}
+
+\begin{equation*}
+    v'(\theta)=v \dfrac{(1-\beta^2)^{1/2}}{1-\beta \cos{\theta}}
+\end{equation*}
+
+\begin{equation*}
+    \lambda'(\theta)=\lambda \dfrac{1-\beta \cos{\theta}}{(1-\beta^2)^{1/2}}=\lambda \gamma(1-\beta \cos{\theta})
+\end{equation*}
+
+\begin{gather}
+\begin{split}
+  \lambda'(\pi)&=\lambda \dfrac{1+\beta}{(1-\beta^2)^{1/2}}=\lambda \left( \dfrac{1+\beta}{1-\beta}\right)^{1/2} \\
+  \lambda'(0)&=\lambda \dfrac{1+ \beta}{(1-\beta^2)^{1/2}}=\lambda \left( \dfrac{1-\beta}{1+\beta}^{1/2} \right)
+\end{split}
+\end{gather}
+
+\begin{align*}
+    \lambda'(\pi)&=\lambda \left(1+\beta+\dfrac{1}{2}\beta^2+\cdots \right) \\
+    \lambda'(0)&=\lambda \left(1-\beta+\dfrac{1}{2}\beta^2+\cdots \right)
+\end{align*}
+
+\begin{equation*}
+    \Delta \lambda_1= \beta \lambda=\dfrac{v}{c}\lambda
+\end{equation*}
+
+\begin{equation*}
+    \Delta \lambda_2=(\gamma-1)\lambda\approx \dfrac{1}{2}\dfrac{v^2}{c^2}\lambda=\dfrac{1}{2\lambda}(\Delta \lambda_1)^2
+\end{equation*}
+
+\chapter{Movimientos acelerados}
+
+\section{Paradoja de los gemelos}
+\end{document}

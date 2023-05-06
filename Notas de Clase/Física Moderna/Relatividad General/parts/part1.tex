@@ -1,0 +1,547 @@
+\documentclass[../main]{subfiles}
+\begin{document}
+% ----------------------------------------- %
+\chapter{ÁLGEBRA TENSORIAL}
+
+\section{Variedades y coordenadas}
+
+\section{Curvas y superficies}
+
+Dado que una curva tiene un grado de libertad, esta depende de un parámetro, por lo que definimos como curva en la variedad mediantes las siguientes ecuaciones perimétricas:
+
+\begin{equation}
+    x^a=x^a(u) ,\quad \text{donde} \ a=1,2,\cdots , N
+\end{equation}
+
+Dado que $u$ es un parametro y $x^1(u),x^2(u),\cdots,x^N(u)$ denotan $N$ funciones de $u$. De manera similar dado que una \textit{subvariedad} o superficie de $M$ dimensiones done $M<N$ tiene $M$ grados de libertad, depende de $M$ parámetros y viene dado por $N$ ecuaciones parametricas de la forma:
+
+\begin{equation}
+    x^a=x^a(u^1,u^2,\cdots,u^M), \quad \text{donde} \ a=1,2,\cdots,N
+\end{equation}
+
+En el caso particular donde $M=N-1$, entonces la subvariedad se llama \textit{hipersuperficie}. En este caso los $\{N-1\}$ parámetros pueden eliminarse de estas $N$ ecuaciones para dar una ecuación que relaciona las coordenadas, de la forma:
+
+\begin{equation}
+    f(x^1,x^2,\cdots,x^N)=0
+\end{equation}
+
+De manera similar los puntos en un subespacio $M$-dimensional, donde $\{M<N\}$ deben satisfacer las siguientes restricciones $\{N-M\}$:
+
+\begin{align}
+    f_1(x^1,x^2,\cdots,x^N)&=0 \nonumber \\
+    f_2(x^1,x^2,\cdots,x^N)&=0 \nonumber \\
+    \vdots \\
+    f_{N-M}(x^1,x^2,\cdots,x^M)&=0 \nonumber
+\end{align}
+
+\section{Transformación de coordenadas}
+
+Volviendo a etiquetar a los puntos de una variedad realizando una transformación de coordenadas de la forma $x^a \rightarrow x'^a$ expresada por las $N$ ecuaciones:
+
+\begin{equation}
+    x'^a=x'^a(x^1,x^2,\cdots,x^N) , \quad \text{donde} \ a=1,2,\cdots,N
+\end{equation}
+
+Obteniéndose una nueva coordenada en función de las anteriores coordenadas. Diferenciando cada ecuación obtenida de la anterior transformación con respecto a cada una de las antiguas coordenadas $x^b$ obtenemos los $N \times N$ derivadas parciales $\pdv{x'^a}{x^b}$, y formamos la siguiente matriz:
+
+\begin{equation}
+\pdv{x'^a}{x^b}=
+\begin{pmatrix}
+\pdv{x'^1}{x^1} & \pdv{x'^1}{x^2} & \cdots & \pdv{x'^1}{x^N} \\
+\pdv{x'^2}{x^1} & \pdv{x'^2}{x^2} & \cdots & \pdv{x'^2}{x^N} \\
+\vdots & \vdots & \ddots & \vdots \\
+\pdv{x'^N}{x^1} & \pdv{x'^N}{x^2} & \cdots & \pdv{x'^N}{x^N}
+\end{pmatrix}
+\end{equation}
+
+El determinante de la matriz de transformación se denomina \textit{Jacobiano de la transformación} y se denota por:
+
+\begin{equation}
+    J=\det \left[ \pdv{x'^a}{x^b}\right]
+\end{equation}
+
+Si $J \neq 0$ para algún rango de coordenadas $x$ entonces se pueden resolver las ecuaciones de transformación de coordenadas obteniéndose la ecuación de transformación inversa:
+
+\begin{equation}
+    x^a=x^a(x'^1,x'^2,\cdots,x'^N) , \quad \text{donde} \ a=1,2,\cdots,N
+\end{equation}
+
+De manera similar definimos la matriz de transformación inversa $\left[ \pdv{x^a}{x'^b}\right]$ y el Jacobiano de la transformación inversa $J=\det \left[ \pdv{x^a}{x'^b}\right]$.
+
+\vspace{0.2cm}
+Usando la regla de cadena podemos demostrar que la matriz transformación inversa es la inversa de la matriz de transformación ya que:
+
+\begin{equation}
+    \sum_{b=1}^N \pdv{x'^a}{x^b} \pdv{x^b}{x'^c}=\pdv{x'^a}{x'^c}= \delta_c^a=
+    \left\{ \begin{array}{lcc}
+             1 &   si  & a=c \\
+             \\ 0 &  si & a\neq c \\
+             \end{array}
+   \right.
+\end{equation}
+
+donde hemos definido el \textit{Delta de Kronecker} $\delta_c^a$ y hemos utilizado el hecho que:
+
+\begin{equation}
+    \pdv{x'^a}{x'^c}=\pdv{x^a}{x^c}, \quad \text{si} \ a\neq c
+\end{equation}
+
+debido a que el conjunto no primado como el conjunto primado son independientes.
+
+\vspace{0.2cm}
+
+Si consideramos los puntos vecinos $P$ y $Q$ en la variedad, con coordenadas $x^a$ y $x^a + dx^a$ respectivamente, entonces en el nuevo sistema de coordenadas primado la separación de coordenadas infinitesimales $P$ y $Q$ y viene dada por:
+
+\begin{equation}
+    dx'^a=\pdv{x'^a}{x^1}dx^1+\pdv{x'^a}{x^2}dx^2+ \cdots + \pdv{x'^a}{x^N}dx^N=\sum_{b=1}^N \pdv{x'^a}{x^b}dx^b
+\end{equation}
+
+\section{Convención de Suma de Einstein}
+
+Nuestra notación puede simplificarse si utilizamos la \textit{convención de suma de Einstein} siempre que un índice aparezca dos veces en una expresión, tanto en el subíndice como el superíndice, se entiende que esto implica una suma el índice de $1$ a $N$, de la forma: \footnote{Tener en cuenta que la convención de suma requiere que, en cualquier termino un índice no debe aparecer más de dos veces y que cualquier índice repetido debe aparecer una vez como superíndice y una vez como subíndice.}
+
+\begin{equation}
+    dx'^a=\sum_{b=1}^N \pdv{x'^a}{x^b}dx^b=\pdv{x'^a}{x^b}dx^b
+\end{equation}
+
+En este caso el índice $b$ se llama \textit{índice ficticio} porque puede ser reemplazado por cualquier otro índice que no este en uso, por ejemplo:
+
+\begin{equation*}
+    \pdv{x'^a}{x^b}dx^b=\pdv{x'^a}{x^c}dx^c
+\end{equation*}
+
+\section{Geometría de Variedades}
+
+Consideremos dos puntos $P$ y $Q$ separados infitesimalmente en la variedad con coordenadas $x^a$ y $x^a+dx^a$ respectivamente con $\{ a=1,2,\cdots,N \}$. \\
+En general, la distancia entre los puntos se puede asignar como cualquier función razonablemente bien comportada de las coordenadas y sus diferenciales.
+
+\begin{equation}
+    ds^2=f(x^a,dx^a)
+\end{equation}
+
+Esta función contiene información sobre la geometría local de la variedad en $P$ y nuestro sistema de coordenadas elegido. Es la asignación en cada punto de la variedad de una distancia entre puntos con valores infitesimalmente diferentes de las coordenadas lo que determina la geometría local de la variedad.
+
+\section{Geometria Riemanniana}
+
+Para desarrollar la \textbf{relatividad general}, nos centramos en las geometrias donde las variedades estan en los intervalos dados por una expresión de la forma:
+
+\begin{equation}
+    ds^2=g_{ab}(x) dx^a dx^b
+\end{equation}
+
+Donde notamos que $g_{ab}(x)$ son los componentes del campo tensor métrico en nuestro sistema de coordenadas elegido. \\
+
+Las variedades con una geometria como la anterior se llaman \textit{variedades de Riemann}. La variedad es Riemanniana siempre que $ds^2>0$.
+
+\begin{itemize}
+    \item[$\Rightarrow$] Si $ds^2$ es positivo o negativo(incluso cero), como es el caso de la relatividad especial y relatividad general, entonces la variedad debería llamarse propiamente \textit{pseudo-riemanniana} pero por lo general se denomina simplemente \textit{riemanniana}.
+\end{itemize}
+
+Las funciones métricas $g_{ab}(x)$ pueden considerarse como los elementos de una matriz $N \times N$ dependiente de la posición. Las funciones métricas se pueden elegir de modo que cumplan $g_{ab}(x)=g_{ba}(x)$, es decir que la matriz sea \textbf{simétrica}. \\
+
+Si las funciones $g_{ab}$ no son simétricas en $a$ y $b$, entonces podemos descomponer la función métrica en partes simétricas y antisimetricas en $a$ y $b$ de la forma:
+
+\begin{equation}
+    g_{ab}(x)=\dfrac{1}{2} \left[ g_{ab}(x)+g_{ba}(x) \right]+\dfrac{1}{2} \left[ g_{ab}(x)-g_{ba}(x) \right]
+\end{equation}
+
+Por tanto en una variedad riemanniana $N$-dimensional hay $\dfrac{1}{2}N(N+1)$ funciones métricas independientes $g_{ab}(x)$.
+
+Se puede cambiar la forma de las funciones metricas haciendo un cambio de coordenadas:
+
+\begin{align*}
+    ds^2&=g_{ab}(x)dx^adx^b \\
+    ds^2&=g_{ab}(x) \pdv{x^a}{x'^c} \pdv{x^b}{x'^d}dx'^c dx'^d \\
+    ds^2&=g'_{cd}(x')dx'^cdx'^d
+\end{align*}
+
+donde las nuevas funciones metricas $g'_{ab}(x)$ en el sistema de coordenadas prima estan relacionados con el sistema de coordenadas no primados por:
+
+\begin{equation}
+    g'_{cd}(x)=g_{ab} \left( x(x') \right) \pdv{x^a}{x'^c} \pdv{x^b}{x'^d}
+\end{equation}
+
+\section{Tensores contravariantes}
+
+\begin{equation*}
+    x^a=x^a(u)
+\end{equation*}
+
+\begin{equation}
+    T^a=\dv{x^a}{u}(0)
+\end{equation}
+
+\begin{equation}
+    x'^a(u)=x'^a(x(u))
+\end{equation}
+
+\begin{equation}
+    T'^a=\dv{x'^a}{u}(0)
+\end{equation}
+
+\begin{equation}
+    T'^a=\left [ \pdv{x'^a}{x^b} \right]_P \left [ \dv{x^b}{u}(0) \right]=\left [ \pdv{x'^a}{x^b} \right]_P T^b   
+\end{equation}
+
+\begin{equation}
+    X'^a=\pdv{x'^a}{x^b}X^b
+\end{equation}
+
+\begin{equation}
+    X'^{ab}=\pdv{x'^a}{x^c} \pdv{x'^b}{x^d}X^{cd}
+\end{equation}
+
+\begin{equation}
+    \phi'=\phi
+\end{equation}
+
+\section{Tensores covariantes}
+
+\begin{equation}
+    \Vec{\nabla} \phi=\left ( \pdv{\phi}{x^1},\pdv{\phi}{x^2}, \pdv{\phi}{x^3} \right)
+\end{equation}
+
+\begin{equation}
+    \phi=\phi(x^a)
+\end{equation}
+
+\begin{equation}
+    N_a=\left [ \pdv{\phi}{x^a} \right]_P 
+\end{equation}
+
+\begin{equation}
+    N'_a= \left [ \pdv{\phi}{x'^a} \right]_P 
+\end{equation}
+
+\begin{equation*}
+    \phi=\phi(x^a(x'))
+\end{equation*}
+
+\begin{equation*}
+    \pdv{\phi}{x'^b}=\pdv{\phi}{x^a} \pdv{x^a}{x'^b}
+\end{equation*}
+
+\begin{equation}
+    N'_a=\left[ \pdv{x^b}{x'^a} \right]_P N_b   
+\end{equation}
+
+\begin{equation}
+    X'_a=\pdv{x^b}{x'^a}X_b
+\end{equation}
+
+\begin{equation}
+    X'_{ab}=\pdv{x^c}{x'^a} \pdv{x^d}{x'^b} X_{cd}
+\end{equation}
+
+\section{Tensores mixtos}
+
+\begin{equation}
+    X'^a_{bc}=\pdv{x'^a}{x^d} \pdv{x^e}{x'^b} \pdv{x^f}{x'^c} X^d_{ef}
+\end{equation}
+
+\begin{equation}
+    X_{ab}=Y_{ab}
+\end{equation}
+
+\begin{equation*}
+    \pdv{x^a}{x'^c} \pdv{x^b}{x'^d} X_{ab}= \pdv{x^a}{x'^c} \pdv{x^b}{x'^d} Y_{ab}
+\end{equation*}
+
+\section{Campos tensoriales}
+
+\begin{equation*}
+    P \rightarrow T_{b \cdots}^{a \cdots} (P)
+\end{equation*}
+
+\begin{equation}
+    X'^a(x')=\left[ \pdv{x'^a}{x^b} \right]_P X^b(x)
+\end{equation}
+
+\section{Operaciones elementales con tensores}
+
+\begin{equation}
+    X_{bc}^a=Y^a_{bc}+Z^a_{bc}
+\end{equation}
+
+\begin{equation}
+    X_{(ab)}=\dfrac{1}{2}(X_{ab}+X_{ba})
+\end{equation}
+
+\begin{equation}
+    X_{[ab]}=\dfrac{1}{2}(X_{ab}-X_{ba})
+\end{equation}
+
+\begin{equation*}
+    X_{(a_1 a_2 \cdots a_r)}=\dfrac{1}{r!}
+\end{equation*}
+
+\begin{equation}
+    X_{[abc]}=\dfrac{1}{6}(X_{abc}-X_{acb}+X_{cab}-X_{cba}+X_{bca}-X_{bac})
+\end{equation}
+
+\begin{equation}
+    X^a_{bcd}=Y^a_b Z_{cd}
+\end{equation}
+
+\begin{equation}
+    \phi=X^a Y_a
+\end{equation}
+
+\begin{align*}
+    X'^a Y'_a&= \left( \pdv{x'^a}{x^b} X^b \right) \left( \pdv{x^c}{x'^a} Y_c \right) \\
+    X'^a Y'_a&= \left( \pdv{x'^a}{x^b} \pdv{x^c}{x'^a} \right) X^b Y_c \\
+    X'^a Y'_a&= \delta_b^c X^b Y_c=X^c Y_c=X^a Y_a 
+\end{align*}
+
+\begin{equation}
+    (X'^a Y'_a)=(X^a Y_a)_P =\phi(P)
+\end{equation}
+
+\begin{equation*}
+    X^a_{bcd} \rightarrow X^a_{acd}=Y_{cd}
+\end{equation*}
+
+\begin{equation}
+    X_{acd}^a=\delta_a^b X^a_{bcd}
+\end{equation}
+
+\section{Interpretación sin índice de campos vectoriales contravariantes}
+
+\begin{equation*}
+    \partial_a :=\pdv{}{x^a}
+\end{equation*}
+
+\begin{equation}
+    X=X^a \partial_a
+\end{equation}
+
+\begin{equation}
+    \delta_b^a=\pdv{x^a}{x^b}=\pdv{}{x^b}x^a(x'^c(x^d))=\pdv{x^a}{x'^c} \pdv{x'^c}{x^b}
+\end{equation}
+
+\begin{align*}
+    X'^a \partial'_a&=X'^a \pdv{}{x'^a} \\
+    X'^a \partial'_a&= \pdv{x'^a}{x^b}X^b \pdv{x^c}{x'^a} \pdv{}{x^c} \\
+    X'^a \partial'_a&=\pdv{x^c}{x'^a} \pdv{x'^a}{x^b}X^b \pdv{}{x^c} \\
+    X'^a \partial'_a&=\delta_b^c X^b \pdv{}{x^c} \\
+    X'^a \partial'_a&=X^b \pdv{}{x^b}=X^a \partial_a
+\end{align*}
+
+\begin{equation*}
+    X_p=[X^a]_P \left[ \pdv{}{x^a} \right]_P
+\end{equation*}
+
+\begin{equation}
+    [X, Y]=XY-YX
+\end{equation}
+
+\begin{align*}
+    Zf&= [X, Y]f \\
+    Zf&= (XY-YX)f \\
+    Zf&= X(Yf)-Y(Xf) \\
+    Zf&= X(Y^a \partial_a f)-Y(X^a \partial_a f) \\
+    Zf&=X^b \partial_b (Y^a \partial_a f)-Y^b \partial_b (X^a \partial_a f) \\
+    Zf&=(X^b \partial_b Y^a-Y^b \partial_b X^a)\partial_a f- X^a Y^b(\partial_b \partial_a f-\partial_a \partial_b f) \\
+    Zf&=(X^b\partial_b Y^a-Y^b \partial_b X^a) \partial_a f
+\end{align*}
+
+\begin{equation*}
+    \partial_a \partial_b=\pdv{^2}{x^a \partial x^b}=\pdv{^2}{x^b \partial x^a}= \partial_b \partial_a
+\end{equation*}
+
+\begin{align}
+    &[X, X]=0 \\
+    &[X, Y]=-[Y, X] \\
+    &[X,[Y, Z]]+[Z, [X, Y]]+[Y, [Z,X]]=0
+\end{align}
+
+\newpage
+% ----------------------------------------- %
+\chapter{CALCULO TENSORIAL}
+
+\section{Derivada parcial de un tensor}
+
+\begin{equation*}
+    \partial_b X^a \quad o \quad \pdv{X^a}{x^b} \quad o \quad X^a_b \quad o \quad X^a_{|b}
+\end{equation*}
+
+\begin{align}
+    \partial'_c X'^a&= \pdv{}{x'^c} \left( \pdv{x'^a}{x^b}X^b \right) \nonumber \\
+    \partial'_c X'^a&= \pdv{x^d}{x'^c} \pdv{}{x^d} \left( \pdv{x'^a}{x^b} X^b \right) \nonumber \\
+    \partial'_c X'^a&= \pdv{x'^a}{x^b} \pdv{x^d}{x'^c} \partial_d X^b + \pdv{^2 x'^a}{x^b \partial x^d} \pdv{x^d}{x'^c}X^b 
+\end{align}
+
+\begin{equation*}
+    \lim_{\delta u \rightarrow 0} \dfrac{[X^a]_P-[X^a]_Q}{\delta u}
+\end{equation*}
+
+\begin{equation*}
+    X'^a_P=\left[ \pdv{x'^a}{x^b} \right]_P X^b_P \quad y \quad X'^a_Q=\left[ \pdv{x'^a}{x^b} \right]_Q X^b_Q
+\end{equation*}
+
+\section{Derivada de Lie}
+
+\begin{equation*}
+    x^a=x^a(u)
+\end{equation*}
+
+\begin{equation}
+    \dv{x^a}{u}=X^a(x(u))
+\end{equation}
+
+\begin{equation}
+    \tilde{a}=x^a+\delta u X^a(x)
+\end{equation}
+
+\begin{align*}
+    P& \rightarrow Q \\
+    x&^a \rightarrow x^a+\delta u X^a(x)
+\end{align*}
+
+\begin{equation}
+    \pdv{\tilde{x}^a}{x^b}=\delta_b^a+\delta u \partial_b X^a
+\end{equation}
+
+\begin{equation}
+    T^{ab}(x) \rightarrow \tilde{T}^{ab}(\tilde{x})
+\end{equation}
+
+\begin{align}
+    \tilde{T}^{ab}(\tilde{x})&=\pdv{\tilde{x}^a}{x^c} \pdv{\tilde{x}^b}{x^d} T^{cd}(x) \nonumber \\
+    \tilde{T}^{ab}(\tilde{x})&=(\delta_c^a+\delta u \partial_c X^a)(\delta_d^b+\delta u \partial_d X^b) T^{cd}(x) \nonumber \\
+    \tilde{T}^{ab}(\tilde{x})&=T^{ab}(x)+[\partial_c X^a T^{cb}(x)+\partial_d X^b T^{ad}(x)]\delta u+O(\delta u^2)
+\end{align}
+
+\begin{equation}
+    T^{ab}(\tilde{x})=T^{ab}(x^c+\delta u X^c(x))=T^{ab}(x)+\delta u X^c \partial_c T^{ab}(x)
+\end{equation}
+
+\begin{equation}
+    L_x T^{ab}=\lim_{\delta u \rightarrow 0} \dfrac{T^{ab}(\tilde{x})-\tilde{T}^{ab}(\tilde{x})}{\delta u}
+\end{equation}
+
+\begin{equation}
+    X^a \overset{*}{=} \delta_1^a=(1,0,0,\cdots,0)
+\end{equation}
+
+\begin{equation*}
+    X=X^a \partial_a \overset{*}{=} \partial_1
+\end{equation*}
+
+\begin{equation}
+    L_X T^{ab} \overset{*}{=} \partial_1 T^{ab}
+\end{equation}
+
+\begin{equation}
+    L_X (\lambda Y^a+\mu Z^a)=\lambda L_X Y^a + \mu L_X Z^a
+\end{equation}
+
+\begin{equation}
+    L_X (Y^a Z_{bc})=Y^a (L_X Z_{bc})+(L_X Y^a) Z_{bc}
+\end{equation}
+
+\begin{equation}
+    \delta_b^{a}L_x T^a_b=L_X T^a_a
+\end{equation}
+
+\begin{equation}
+    L_X \phi= X \phi=X^a \partial_a \phi
+\end{equation}
+
+\begin{equation}
+    L_X Y^a=[X, Y]^a=X^b \partial_b Y^a-Y^b \partial_b X^a
+\end{equation}
+
+\begin{equation}
+    L_X Y_a=X^b \partial_b Y_a+Y_b \partial_a X^b
+\end{equation}
+
+\begin{equation}
+    L_X T_{b \cdots}^{a \cdots}=X^c \partial_c T_{b \cdots}^{a \cdots}-T_{b \cdots}^{c \cdots} \partial_c X^a- \cdots + T_{c \cdots}^{a \cdots} \partial_b X^c + \cdots
+\end{equation}
+
+\section{La conexión afín y la derivación covariante}
+
+\begin{equation}
+    X^a(x+\delta x)=X^a(x)+\delta x^b \partial_b X^a
+\end{equation}
+
+\begin{equation}
+    \delta X^a (x)=\delta x^b \partial_b X^a=X^a(x+\delta x)-X^a(x)
+\end{equation}
+
+\begin{equation}
+    [X^a(x)+\delta X^a(x)]-[X^a(x)+\Bar{\delta} X^a(x)]=\delta X^a (x)-\Bar{\delta} X^a (x)
+\end{equation}
+
+\begin{equation}
+    \Bar{\delta} X^a(x)=-\Gamma_{bc}^{a}(x) X^b(x) \delta x^c
+\end{equation}
+
+\begin{equation*}
+    \nabla_c X^a \quad o \quad X^a_{;c} \quad o \quad X^a_{||c}
+\end{equation*}
+
+\begin{equation*}
+    \nabla_c X^a=\lim_{\delta x^c \rightarrow 0} \dfrac{1}{\delta x^c} \{ X^a (x+\delta x)-[X^a(x)+\Bar{\delta} X^a(x)]\}
+\end{equation*}
+
+\begin{equation}
+    \nabla_c X^a= \partial_c X^a+ \Gamma_{bc}^a X^b
+\end{equation}
+
+\begin{equation}
+    \Gamma'^a_{bc}=\pdv{x'^a}{x^d} \pdv{x^e}{x'^b} \pdv{x^f}{x'^c} \Gamma_{ef}^d- \pdv{x^d}{x'^b} \pdv{x^e}{x'^c} \pdv{^2 x'^a}{x^d \partial x^e}
+\end{equation}
+
+\begin{equation}
+    \Gamma'^a_{bc}=\pdv{x'^a}{x^d} \pdv{x^e}{x'^b} \pdv{x^f}{x'^c} \Gamma_{ef}^d+ \pdv{x'^a}{x^d} \pdv{^2 x^d}{x'^b \partial x'^c}
+\end{equation}
+
+\begin{equation}
+    \nabla_a \phi= \partial_a \phi
+\end{equation}
+
+\begin{equation}
+    \nabla_c X_a= \partial_c X_a - \Gamma^b_{ac} X_b
+\end{equation}
+
+\begin{equation}
+    \nabla_c T^{a \cdots}_{b \cdots}=\partial_c T^{a \cdots}_{b \cdots}+\Gamma^a_{dc} T^{d \cdots}_{b \cdots}+\cdots- \Gamma^{d}_{bc} T^{a \cdots}_{d\cdots}- \cdots
+\end{equation}
+
+\begin{equation*}
+    T^a_{bc}=\Gamma^a_{bc}-\Gamma^a_{cb}
+\end{equation*}
+
+\begin{equation}
+   \Gamma^a_{bc}=\Gamma^a_{cb} 
+\end{equation}
+
+\begin{equation}
+    L_X Y^a= X^b \partial_b Y^a- Y^b \partial_b X^a=X^b \nabla_b Y^a-Y^b \nabla_b X^a
+\end{equation}
+
+\section{Geodésicas afines}
+
+\section{Tensor de Riemann}
+
+\section{Coordenadas geodésicas}
+
+\section{Planitud afín}
+
+\section{La métrica}
+
+\section{Planitud métrica}
+
+\section{Tensor de curvatura}
+
+\section{Tensor de Weyl}
+
+\newpage
+% ----------------------------------------- %
+\chapter{INTEGRACIÓN, VARIACIÓN Y SIMETRÍA}
+
+
+\newpage
+\end{document}

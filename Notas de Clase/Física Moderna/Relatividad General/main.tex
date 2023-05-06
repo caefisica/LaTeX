@@ -1,0 +1,63 @@
+\documentclass[oneside]{book}
+\usepackage[utf8]{inputenc} % codificación
+\usepackage[spanish]{babel} % lenguaje
+\usepackage{subfiles}
+
+\usepackage{xcolor} % color de página
+\definecolor{tabom}{HTML}{C52028}
+\usepackage{geometry} % forma
+
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage[colorlinks=false]{hyperref}
+\usepackage{cancel}
+\usepackage{graphicx}
+\usepackage{parskip}
+
+\begin{document}
+\begin{titlepage}
+\newgeometry{left=7.5cm}
+	\scshape
+	\pagecolor{tabom}
+	\color{white}
+	\noindent
+	{\Huge Relatividad General y \\ Cosmología}
+	\vskip0.1\baselineskip\noindent
+	\makebox[0pt][l]{\rule{1.2\textwidth}{0.5pt}}
+	\par\noindent
+	\textit{Universidad Nacional Mayor de San Marcos}
+	\vskip0.1\baselineskip\noindent
+	\textit{Facultad de Ciencias Físicas}
+	\vskip2\baselineskip
+	\noindent
+	\textsf{Editado por R. F. José Avalos A.}
+	\vfill\noindent
+	\textsf{Notas de Relatividad General}
+	\vskip0.1\baselineskip\noindent
+	\makebox[0pt][l]{\rule{1\textwidth}{0.5pt}}
+	\vskip\baselineskip\noindent
+	\textsf{Última actualización: \today}
+	\restoregeometry
+	\pagecolor{white}\color{black}
+\end{titlepage}
+\newpage
+\tableofcontents
+\newpage
+% ----------------------------------------- %
+\part{FORMALISMO DE TENSORES}
+\subfile{parts/part1}
+
+% ----------------------------------------- %
+\part{RELATIVIDAD GENERAL}
+\subfile{parts/part2}
+
+% ----------------------------------------- %
+\part{AGUJEROS NEGROS}
+\subfile{parts/part3}
+% ----------------------------------------- %
+\part{ONDAS GRAVITACIONALES}
+\subfile{parts/part4}
+% ----------------------------------------- %
+\part{COSMOLOGIA}
+\subfile{parts/part5}
+\end{document}
