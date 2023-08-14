@@ -51,8 +51,8 @@ ARG TEXLIVE_MIRROR="https://mirror.ctan.org/systems/texlive/tlnet"
 ARG DEBIAN_FRONTEND="noninteractive"
 
 #! Set environment variables
-ENV LANG="en_US.UTF-8"
-ENV LANGUAGE="en_US.UTF-8"
+ENV LANG="es_ES.UTF-8"
+ENV LANGUAGE="es_ES.UTF-8"
 ENV TERM="xterm"
 ENV TEXDIR="/usr/local/texlive"
 ENV TEXUSERDIR="/texlive-user"
@@ -141,7 +141,7 @@ EOF
 RUN <<EOF
 set -e
 tlmgr update --self --all
-tlmgr install latexmk latexindent
+tlmgr install latexmk latexindent subfiles pgf physics cancel caption etoolbox newfloat babel-spanish
 tlmgr update --all
 texhash
 EOF

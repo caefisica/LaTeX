@@ -101,5 +101,5 @@
             "upgradePackages": true
         }
     },
-    "postStartCommand": "tlmgr install subfiles pgf physics cancel caption etoolbox newfloat ${{ templateOption.latexEngine }}"
+    "postStartCommand": "tlmgr install ${{ templateOption.latexEngine }}"
 }
