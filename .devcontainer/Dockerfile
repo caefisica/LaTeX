@@ -141,12 +141,18 @@ EOF
 RUN <<EOF
 set -e
 tlmgr update --self --all
-tlmgr install latexmk latexindent subfiles pgf physics cancel caption etoolbox newfloat babel-spanish
+tlmgr install latexmk latexindent subfiles pgf physics cancel caption etoolbox newfloat babel-spanish biber
 tlmgr update --all
 texhash
 EOF
 
 COPY --from=chktex-builder /tmp/chktex-builder/chktex /usr/local/bin/chktex
+
+#! Install Spanish for Babel
+RUN <<EOF
+set -e
+apt install -y texlive-lang-spanish
+EOF
 
 #! Check that the following commands work and have the right permissions
 RUN <<EOF
