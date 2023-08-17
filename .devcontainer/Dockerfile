@@ -141,7 +141,7 @@ EOF
 RUN <<EOF
 set -e
 tlmgr update --self --all
-tlmgr install latexmk latexindent subfiles pgf physics cancel caption etoolbox newfloat babel-spanish biber
+tlmgr install latexmk latexindent subfiles pgf physics cancel caption etoolbox newfloat babel-spanish biber hyphen-spanish biblatex
 tlmgr update --all
 texhash
 EOF
