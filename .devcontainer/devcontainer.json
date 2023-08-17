@@ -4,16 +4,17 @@
     "customizations": {
         "vscode": {
             "extensions": [
-				"james-yu.latex-workshop",
-				"aaron-bond.better-comments",
-				"shardulm94.trailing-spaces",
-				"stkb.rewrap",
-				"vivaxy.vscode-conventional-commits",
-				"analytic-signal.preview-pdf"
-			],
+                "james-yu.latex-workshop",
+                "aaron-bond.better-comments",
+                "shardulm94.trailing-spaces",
+                "stkb.rewrap",
+                "vivaxy.vscode-conventional-commits",
+                "analytic-signal.preview-pdf"
+            ],
             "settings": {
                 "files.eol": "\n",
                 "editor.formatOnSave": true,
+                "git.autofetch": true,
                 "files.associations": {
                     "*.tex": "latex"
                 },
@@ -21,18 +22,18 @@
                 "latex-workshop.latex.clean.subfolder.enabled": true,
                 "latex-workshop.latex.recipes": [
                     {
+                        "name": "latexmk (default)",
+                        "tools": [
+                            "latexmk"
+                        ]
+                    },
+                    {
                         "name": "${{ templateOption.latexEngine }} -> biber -> ${{ templateOption.latexEngine }}* 2",
                         "tools": [
                             "${{ templateOption.latexEngine }}",
                             "biber",
                             "${{ templateOption.latexEngine }}",
                             "${{ templateOption.latexEngine }}"
-                        ]
-                    },
-                    {
-                        "name": "latexmk",
-                        "tools": [
-                            "latexmk"
                         ]
                     }
                 ],
@@ -60,6 +61,7 @@
                         "name": "latexmk",
                         "command": "latexmk",
                         "args": [
+                            "--shell-escape",
                             "-synctex=1",
                             "-interaction=nonstopmode",
                             "-file-line-error",
