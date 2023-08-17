@@ -4,13 +4,13 @@
     "customizations": {
         "vscode": {
             "extensions": [
-				"james-yu.latex-workshop",
-				"aaron-bond.better-comments",
-				"shardulm94.trailing-spaces",
-				"stkb.rewrap",
-				"vivaxy.vscode-conventional-commits",
-				"analytic-signal.preview-pdf"
-			],
+                "james-yu.latex-workshop",
+                "aaron-bond.better-comments",
+                "shardulm94.trailing-spaces",
+                "stkb.rewrap",
+                "vivaxy.vscode-conventional-commits",
+                "analytic-signal.preview-pdf"
+            ],
             "settings": {
                 "files.eol": "\n",
                 "editor.formatOnSave": true,
@@ -61,6 +61,7 @@
                         "name": "latexmk",
                         "command": "latexmk",
                         "args": [
+                            "--shell-escape",
                             "-synctex=1",
                             "-interaction=nonstopmode",
                             "-file-line-error",
