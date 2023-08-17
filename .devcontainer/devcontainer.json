@@ -1,9 +1,6 @@
 {
     "name": "NotasDeLaTeX",
-    //"image": "ghcr.io/jmuchovej/latex-devcontainer:main",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
+    "image": "ghcr.io/caefisica/latex:master",
     "customizations": {
         "vscode": {
             "extensions": [
