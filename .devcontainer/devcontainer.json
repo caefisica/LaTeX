@@ -14,6 +14,7 @@
             "settings": {
                 "files.eol": "\n",
                 "editor.formatOnSave": true,
+                "git.autofetch": true,
                 "files.associations": {
                     "*.tex": "latex"
                 },
@@ -21,18 +22,18 @@
                 "latex-workshop.latex.clean.subfolder.enabled": true,
                 "latex-workshop.latex.recipes": [
                     {
+                        "name": "latexmk (default)",
+                        "tools": [
+                            "latexmk"
+                        ]
+                    },
+                    {
                         "name": "${{ templateOption.latexEngine }} -> biber -> ${{ templateOption.latexEngine }}* 2",
                         "tools": [
                             "${{ templateOption.latexEngine }}",
                             "biber",
                             "${{ templateOption.latexEngine }}",
                             "${{ templateOption.latexEngine }}"
-                        ]
-                    },
-                    {
-                        "name": "latexmk",
-                        "tools": [
-                            "latexmk"
                         ]
                     }
                 ],
