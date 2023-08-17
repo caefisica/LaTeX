@@ -13,9 +13,9 @@ donde:
 \end{itemize}
 \section{Ecuación de estado térmica}
 Partiendo de la ley de gas ideal:
-    \begin{equation}
-        p=\dfrac{n RT}{V}
-    \end{equation}
+\begin{equation}
+    p=\dfrac{n RT}{V}
+\end{equation}
 la cual podemos expresar de la siguiente forma:
 \begin{equation}
     pV=nRT
@@ -29,12 +29,15 @@ La ecuación de estado calórica se expresa de la siguiente forma:
 \begin{equation}
     U=U_0+C_v(T-T_0)
 \end{equation}
-esta ecuación se demostrará mas adelante. 
+esta ecuación se demostrará mas adelante.
+
 \begin{itemize}
     \item $U$ es la energía interna.
     \item $C_v$ es la capacidad calorífica a $V=cte$.
 \end{itemize}
+
 \section*{Procesos Termodinámicos}
+
 \begin{itemize}
     \item Isotérmico ($T=cte$).
     \item Isobárico ($p=cte$).
@@ -42,12 +45,14 @@ esta ecuación se demostrará mas adelante.
     \item Politrópico ($C=cte$).
     \item Adiabático $\left(C=\dfrac{\delta Q}{dT}=0\right)$.
 \end{itemize}
+
 \section{Proceso Isotérmico (T=cte)}
-\begin{minipage}{0.5\textwidth}
-    \includegraphics[scale=0.14]{Termodinámica/images/isotermico.png}
+
+\begin{minipage}{0.49\textwidth}
+    \includegraphics[width=\linewidth]{../images/isotermico.png}
 \end{minipage}
-\begin{minipage}{0.5\textwidth}
-    Partiendo de la ecuación de Clapeyron-Mendeleiev, como $T=cte$ entonces $nRT=c_1$
+\begin{minipage}{0.49\textwidth}
+    Considerando la ec. de Clapeyron-Mendeleiev y que $T=cte$, tenemos que $nRT=c_1$.
     \begin{equation*}
         pV=nRT=c_1
     \end{equation*}
@@ -57,12 +62,14 @@ esta ecuación se demostrará mas adelante.
     \end{equation}
     donde $c_1=nRT$.
 \end{minipage}
+
 \section{Proceso Isobárico (p=cte)}
-\begin{minipage}{0.5\textwidth}
-    \includegraphics[scale=0.24]{Termodinámica/images/isobara.png}
+
+\begin{minipage}{0.49\textwidth}
+    \includegraphics[width=\linewidth]{../images/isobara.png}
 \end{minipage}
-\begin{minipage}{0.5\textwidth}
-    Partiendo de la ecuación de Clapeyron-Mendeleiev, como $p=cte$ entonces:
+\begin{minipage}{0.49\textwidth}
+    Partiendo de la ec. de Clapeyron-Mendeleiev, como $p=cte$ entonces:
     \begin{equation*}
         pV=nRT \rightarrow V=\dfrac{nRT}{p}
     \end{equation*}
@@ -71,12 +78,13 @@ esta ecuación se demostrará mas adelante.
         V=\dfrac{nRT}{p}=c_2 T=V=f(T)
     \end{equation*}
 \end{minipage}
+
 \section{Proceso Isocórico}
-\begin{minipage}{0.5\textwidth}
-    \includegraphics[scale=0.24]{Termodinámica/images/isocora.png}
+\begin{minipage}{0.49\textwidth}
+    \includegraphics[width=\linewidth]{../images/isocora.png}
 \end{minipage}
-\begin{minipage}{0.5\textwidth}
-    Partiendo de la ecuación de Clapeyron-Mendeleiev, como $V=cte$ entonces:
+\begin{minipage}{0.49\textwidth}
+    Partiendo de la ec. de Clapeyron-Mendeleiev, como $V=cte$ entonces:
     \begin{equation*}
         pV=nRT \rightarrow p=\dfrac{nRT}{V}
     \end{equation*}
@@ -96,8 +104,8 @@ Para un sistema abierto la energía interna dependerá también de $N$ la cual s
 \end{equation}
 Calculamos la evolución energetica del sistema hallando la diferencial de $U$:
 \begin{align}
-    dU&=\left( \pdv{U}{T} \right)_V dT + \left( \pdv{U}{V} \right)_T dV \\
-    dU&=\alpha(T)dT+\beta(V)dV
+    dU & =\left( \pdv{U}{T} \right)_V dT + \left( \pdv{U}{V} \right)_T dV \\
+    dU & =\alpha(T)dT+\beta(V)dV
 \end{align}
 \textbf{Observación:}
 \begin{equation}
@@ -107,8 +115,8 @@ Calculamos la evolución energetica del sistema hallando la diferencial de $U$:
 \section{Trabajo calorífico elemental}
 Tenemos que el trabajo calorifico puede ser expresado como:
 \begin{align}
-    \delta W&=\sum_{i=1}^{\ell} A_i d a_i \\
-    \delta W&=A_1 da_1+\cdots + A_{\ell} da_{\ell}
+    \delta W & =\sum_{i=1}^{\ell} A_i d a_i          \\
+    \delta W & =A_1 da_1+\cdots + A_{\ell} da_{\ell}
 \end{align}
 donde:
 \begin{itemize}
@@ -116,24 +124,24 @@ donde:
     \item $A_u$ es la i-ésima fuerza generalizada.
     \item $\ell$ son los grados de libertad
 \end{itemize}
-\begin{minipage}{0.5\textwidth}
-   Otra forma de expresarlo es:
+\begin{minipage}{0.49\textwidth}
+    Otra forma de expresarlo es:
     \begin{equation}
         \delta W=\mathbf{F} \cdot d \mathbf{r}=pdV
     \end{equation}
     Expresado en su forma integral:
     \begin{equation}
         W=\int \delta W=\int_{V_0}^{V}p dV
-    \end{equation} 
+    \end{equation}
 \end{minipage}
-\begin{minipage}{0.5\textwidth}
-   \includegraphics[scale=0.23]{Termodinámica/images/diagram-20230116.png}
+\begin{minipage}{0.49\textwidth}
+    \includegraphics[scale=0.23]{../images/diagram-20230116.png}
 \end{minipage}
 
 \chapter{Primera ley de la termodinámica}
 Conservación de la energía calorífica:
 \begin{align}
-    Q=U_2-U_1+W\\
+    Q=U_2-U_1+W \\
     \delta Q=dU+\delta W
 \end{align}
 Si $\delta W = p dV$, entonces:
@@ -157,97 +165,100 @@ donde por la \textbf{Ley de Joule} se cumple para el gas ideal que:
 \begin{equation}
     \int_{(1-2)}d\mu =\int_1^2 d\mu=\mu_2-\mu_1=\mu_{(2)}-\mu_{(1)}
 \end{equation}
+
 \section{Aplicación de la primera ley de la Termodinámica}
-Primera definición de las capacidades caloríficas: \\
-    \begin{equation}
-        C=\dfrac{\delta Q}{dT}
-    \end{equation}
-    Si $V=cte$:
-    \begin{equation}
-        C_v=[C]_v
-    \end{equation}
-    Si $p=cte$:
-    \begin{equation}
-        C_p=[C]_p
-    \end{equation}
+
+Primera definición de las capacidades caloríficas:
+
+\begin{equation}
+    C=\dfrac{\delta Q}{dT}
+\end{equation}
+Si $V=cte$:
+\begin{equation}
+    C_v=[C]_v
+\end{equation}
+Si $p=cte$:
+\begin{equation}
+    C_p=[C]_p
+\end{equation}
 \begin{enumerate}
     \item Para $C=C_v$, donde el volumen es constante y $dV=0$: \\
-    Si $U=U(T,V)$:
-    \begin{align}
-        \delta Q&=\left(\pdv{U}{T}\right)_V dT+\left( \pdv{U}{V}\right)_T dV+pdV \\
-        \delta Q&=\left(\pdv{U}{T}\right)_V dT+\left[\left( \pdv{U}{V}\right)_T+p\right]dV
-        \label{ec30}
-    \end{align}
-    Si $C=C_v$, donde el volumen es constante. Sabemos que la capacidad calorífica esta definida de forma general como:
-    \begin{equation}
-        C=\dfrac{dQ}{dT}
-        \label{ec31}
-    \end{equation}
-    Y para el volumen constante reemplazamos \eqref{ec30} en \eqref{ec31}:
-    \begin{align}
-        C_v&=\left[\dfrac{\displaystyle \left(\pdv{U}{T}\right)_V dT+\left[\left( \pdv{U}{V}\right)_T+p\right]dV}{dT}\right]_V \\
-        C_v&= \left(\pdv{U}{T}\right)_V \dfrac{dT}{dT}+\left[ \left(\pdv{U}{V}\right)_T+p\right]\underbrace{\dfrac{dV}{dT}}_{0} \\
-        C_v&=\left(\pdv{U}{T}\right)_V \dfrac{dT}{dT}=\left(\pdv{U}{T}\right)_V
-    \end{align}
+          Si $U=U(T,V)$:
+          \begin{align}
+              \delta Q & =\left(\pdv{U}{T}\right)_V dT+\left( \pdv{U}{V}\right)_T dV+pdV           \\
+              \delta Q & =\left(\pdv{U}{T}\right)_V dT+\left[\left( \pdv{U}{V}\right)_T+p\right]dV
+              \label{ec30}
+          \end{align}
+          Si $C=C_v$, donde el volumen es constante. Sabemos que la capacidad calorífica esta definida de forma general como:
+          \begin{equation}
+              C=\dfrac{dQ}{dT}
+              \label{ec31}
+          \end{equation}
+          Y para el volumen constante reemplazamos \eqref{ec30} en \eqref{ec31}:
+          \begin{align}
+              C_v & =\left[\dfrac{\displaystyle \left(\pdv{U}{T}\right)_V dT+\left[\left( \pdv{U}{V}\right)_T+p\right]dV}{dT}\right]_V  \\
+              C_v & = \left(\pdv{U}{T}\right)_V \dfrac{dT}{dT}+\left[ \left(\pdv{U}{V}\right)_T+p\right]\underbrace{\dfrac{dV}{dT}}_{0} \\
+              C_v & =\left(\pdv{U}{T}\right)_V \dfrac{dT}{dT}=\left(\pdv{U}{T}\right)_V
+          \end{align}
     \item Calcular $U$ si se tiene $C_v$ donde $dV=0$:
-    Si obtenemos la derivada total de la energía interna donde $U=U(T,V)$, obtenemos:
-    \begin{equation}
-        dU=\left( \pdv{U}{T} \right)_V dT+\left( \pdv{U}{V} \right)_T dV
-    \end{equation}
-    Como el volumen es constante, entonces $dV=0$, quedándonos así:
-    \begin{equation}
-        dU=\left( \pdv{U}{T} \right)_V dT
-    \end{equation}
-    Pero sabemos que la capacidad calorífica a volumen constante esta definida como:
-    \begin{equation}
-        C_v=\left( \pdv{U}{T} \right)_V dT
-    \end{equation}
-    Reemplazamos e integramos:
-    \begin{align*}
-        dU&=C_v dT \\
-        \int_{U_0}^{U} dU&=\int_{T_0}^T C_v dT \\
-        U-U_0&=\int_{T_0}^T C_v dT \\
-        U&=U_0+\int_{T_0}^T C_v dT
-    \end{align*}
+          Si obtenemos la derivada total de la energía interna donde $U=U(T,V)$, obtenemos:
+          \begin{equation}
+              dU=\left( \pdv{U}{T} \right)_V dT+\left( \pdv{U}{V} \right)_T dV
+          \end{equation}
+          Como el volumen es constante, entonces $dV=0$, quedándonos así:
+          \begin{equation}
+              dU=\left( \pdv{U}{T} \right)_V dT
+          \end{equation}
+          Pero sabemos que la capacidad calorífica a volumen constante esta definida como:
+          \begin{equation}
+              C_v=\left( \pdv{U}{T} \right)_V dT
+          \end{equation}
+          Reemplazamos e integramos:
+          \begin{align*}
+              dU                & =C_v dT                  \\
+              \int_{U_0}^{U} dU & =\int_{T_0}^T C_v dT     \\
+              U-U_0             & =\int_{T_0}^T C_v dT     \\
+              U                 & =U_0+\int_{T_0}^T C_v dT
+          \end{align*}
     \item Calcular $C=C_p$ donde la presión es constante y $dp=0$:\\
-    Si $U=U(T,V)$:
-    \begin{align}
-        \delta Q&=\left(\pdv{U}{T}\right)_V dT+\left( \pdv{U}{V}\right)_T dV+pdV \\
-        \delta Q&=\left(\pdv{U}{T}\right)_V dT+\left[\left( \pdv{U}{V}\right)_T+p\right]dV
-        \label{ec36}
-    \end{align}
-    Si $C_p$ esta definido como:
-    \begin{equation}
-        C_p=\left[ \dfrac{\delta Q}{dT}\right]_p
-        \label{ec37}
-    \end{equation}
-    Reemplazamos \eqref{ec36} en \eqref{ec37}:
-    \begin{align}
-        C_p&=\left[ \dfrac{ \displaystyle \left(\pdv{U}{T}\right)_V dT+\left[\left( \pdv{U}{V}\right)_T+p\right]dV}{dT}\right]_p \\
-        C_p&=\left[ \left(\pdv{U}{T}\right)_V+\left[\left(\pdv{U}{V}\right)_T+p\right]\dfrac{dV}{dT}\right]_p
-    \end{align}
-    Si $\displaystyle C_v=\left( \pdv{U}{T}\right)_V$:
-    \begin{align}
-        C_p&=C_v\left[ \left[\left(\pdv{U}{V}\right)_T+p\right]\dfrac{dV}{dT}\right]_p
-        \label{ec40}
-    \end{align}
-    Si consideramos al volumen como una función que depende de $T$ y $p$:
-    \begin{equation}
-        V=V(T,p)
-    \end{equation}
-    hallamos su diferencial total:
-    \begin{align}
-        dV=\left(\pdv{V}{T}\right)_p+\left(\pdv{V}{p}\right)_T dp
-    \end{align}
-    en el caso cuando la presión es constante queda:
-    \begin{equation}
-        dV=\left( \pdv{V}{T}\right)_p
-        \label{ec43}
-    \end{equation}
-    Reemplazamos \eqref{ec40} en \eqref{ec43}:
-    \begin{equation}
-        C_p=C_v+\left[ \left[\left(\pdv{U}{V}\right)_T+p\right]\dfrac{\partial V}{dT}\right]_p
-    \end{equation}
+          Si $U=U(T,V)$:
+          \begin{align}
+              \delta Q & =\left(\pdv{U}{T}\right)_V dT+\left( \pdv{U}{V}\right)_T dV+pdV           \\
+              \delta Q & =\left(\pdv{U}{T}\right)_V dT+\left[\left( \pdv{U}{V}\right)_T+p\right]dV
+              \label{ec36}
+          \end{align}
+          Si $C_p$ esta definido como:
+          \begin{equation}
+              C_p=\left[ \dfrac{\delta Q}{dT}\right]_p
+              \label{ec37}
+          \end{equation}
+          Reemplazamos \eqref{ec36} en \eqref{ec37}:
+          \begin{align}
+              C_p & =\left[ \dfrac{ \displaystyle \left(\pdv{U}{T}\right)_V dT+\left[\left( \pdv{U}{V}\right)_T+p\right]dV}{dT}\right]_p \\
+              C_p & =\left[ \left(\pdv{U}{T}\right)_V+\left[\left(\pdv{U}{V}\right)_T+p\right]\dfrac{dV}{dT}\right]_p
+          \end{align}
+          Si $\displaystyle C_v=\left( \pdv{U}{T}\right)_V$:
+          \begin{align}
+              C_p & =C_v\left[ \left[\left(\pdv{U}{V}\right)_T+p\right]\dfrac{dV}{dT}\right]_p
+              \label{ec40}
+          \end{align}
+          Si consideramos al volumen como una función que depende de $T$ y $p$:
+          \begin{equation}
+              V=V(T,p)
+          \end{equation}
+          hallamos su diferencial total:
+          \begin{align}
+              dV=\left(\pdv{V}{T}\right)_p+\left(\pdv{V}{p}\right)_T dp
+          \end{align}
+          en el caso cuando la presión es constante queda:
+          \begin{equation}
+              dV=\left( \pdv{V}{T}\right)_p
+              \label{ec43}
+          \end{equation}
+          Reemplazamos \eqref{ec40} en \eqref{ec43}:
+          \begin{equation}
+              C_p=C_v+\left[ \left[\left(\pdv{U}{V}\right)_T+p\right]\dfrac{\partial V}{dT}\right]_p
+          \end{equation}
 \end{enumerate}
 \section{Primera ley para un sistema abierto}
 Para un sistema abierto monocomponente la primera ley se expresa como:
@@ -261,7 +272,7 @@ De forma general tenemos:
 \end{equation}
 \chapter{Segunda ley de la termodinámica}
 \section{Entropía}
-    Conocemos una nueva función de estado llamada entropía denotada por $S$ la cual es la encargada de caracterizar el nivel de organización de las componentes del sistema(orden o desorden).
+Conocemos una nueva función de estado llamada entropía denotada por $S$ la cual es la encargada de caracterizar el nivel de organización de las componentes del sistema(orden o desorden).
 \begin{align}
     \underbrace{dS}_{efecto}\sim \underbrace{\delta Q}_{causa} \\
     \delta Q= \lambda dS
@@ -271,24 +282,26 @@ donde $\lambda=\lambda(\underbrace{a_1,a_2, \cdots, a_n}_{par\acute{a}metros}, T
     \lambda = \lambda(a_1,a_2,\cdots, a_n,T)=\lambda(T)
 \end{equation}
 de modo que tenemos de forma diferencial:
+
 \begin{equation}
     \delta Q=TdS
 \end{equation}
-\begin{minipage}{0.5\textwidth}
+
+\begin{minipage}{0.49\textwidth}
     O también:
     \begin{equation}
         dS= \dfrac{\delta Q}{T}
     \end{equation}
     Si integramos:
     \begin{align}
-        \int_{(1)}^{(1)}dS&=\oint \dfrac{\delta Q}{T} \\
-        0&= \oint \dfrac{\delta Q}{T}
+        \int_{(1)}^{(1)}dS & =\oint \dfrac{\delta Q}{T}  \\
+        0                  & = \oint \dfrac{\delta Q}{T}
     \end{align}
     Esta integral se conoce como \textit{Integral de Clausius}.
 \end{minipage}
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}{0.49\textwidth}
     \begin{center}
-     \includegraphics[scale=0.6]{Termodinámica/images/ciclo_irrev.png}       
+        \includegraphics[scale=0.6]{../images/ciclo_irrev.png}
     \end{center}
 \end{minipage}
 \chapter{Ecuación Fundamental de la termodinámica}
@@ -322,23 +335,23 @@ Si despejamos $p$ de la ecuación de Clapeyron Mendeleiev:
 \end{equation}
 Hallamos el diferencial de la energia interna definida como $U=U(T,V)$:
 \begin{align}
-    dU&=\left( \pdv{U}{T}\right)_V dT+\underbrace{\left( \pdv{U}{V}\right)_T}_{ley \ de \ joule} dV \\
-    dU&=C_v dT+(0)dV \\
-    dU&=C_v dT
+    dU & =\left( \pdv{U}{T}\right)_V dT+\underbrace{\left( \pdv{U}{V}\right)_T}_{ley \ de \ joule} dV \\
+    dU & =C_v dT+(0)dV                                                                                \\
+    dU & =C_v dT
     \label{ec62}
 \end{align}
 Reemplazando en \eqref{ec58}:
 \begin{align}
-    dS&=\dfrac{dU+pdV}{T} \\
-    dS&=\dfrac{Cv dT+pdV}{T}\\
-    dS&=C_v \dfrac{dT}{T}+\dfrac{p}{T}dV
+    dS & =\dfrac{dU+pdV}{T}                \\
+    dS & =\dfrac{Cv dT+pdV}{T}             \\
+    dS & =C_v \dfrac{dT}{T}+\dfrac{p}{T}dV
 \end{align}
 Reemplazando la ecuación \eqref{ec59} e integrando nos queda:
 \begin{align}
-    dS&=C_v \dfrac{dT}{T}+nR \dfrac{dV}{V} \\
-    \int_{S_0}^{S}dS&=\int_{T_0}^{T}C_v \dfrac{dT}{T}+\int_{V_0}^V nR \dfrac{dV}{V} \\
-    S-S_0&=C_v \ln{\left(\dfrac{T}{T_0}\right)}+nR \ln{\left(\dfrac{V}{V_0}\right)} \\
-    S&=S_0+C_v \ln{\left(\dfrac{T}{T_0}\right)}+nR \ln{\left(\dfrac{V}{V_0}\right)}
+    dS               & =C_v \dfrac{dT}{T}+nR \dfrac{dV}{V}                                           \\
+    \int_{S_0}^{S}dS & =\int_{T_0}^{T}C_v \dfrac{dT}{T}+\int_{V_0}^V nR \dfrac{dV}{V}                \\
+    S-S_0            & =C_v \ln{\left(\dfrac{T}{T_0}\right)}+nR \ln{\left(\dfrac{V}{V_0}\right)}     \\
+    S                & =S_0+C_v \ln{\left(\dfrac{T}{T_0}\right)}+nR \ln{\left(\dfrac{V}{V_0}\right)}
 \end{align}
 \section{Energía interna para un sistema cerrado}
 De la ecuación fundamental de la termodinámica:
@@ -361,12 +374,12 @@ Igualamos tanto la ecuación \eqref{ec71} y la ecuación \eqref{ec72}:
 \end{equation}
 Si comparamos términos notamos que:
 \begin{equation}
-    \left\{ 
+    \left\{
     \begin{array}{l}
-         T=\left(\displaystyle \pdv{U}{S}\right)_V \\ \\
-         p=-\left(\displaystyle \pdv{U}{V}\right)_S
-    \end{array} 
-    \right. 
+        T=\left(\displaystyle \pdv{U}{S}\right)_V \\ \\
+        p=-\left(\displaystyle \pdv{U}{V}\right)_S
+    \end{array}
+    \right.
 \end{equation}
 \section{Energía libre de Helmholtz para un sistema cerrado}
 Si tenemos una función $F$ denominada energía libre de Helmholtz la cual depende de la temperatura y el volumen:
@@ -385,13 +398,13 @@ de la EFT:
 \end{equation}
 Aplicando una herramienta matematica:
 \begin{align}
-    d[ST]&=SdT+TdS \\
-    TdS&=d[ST]-SdT
+    d[ST] & =SdT+TdS   \\
+    TdS   & =d[ST]-SdT
 \end{align}
 Reemplazando en \eqref{ec77}:
 \begin{align}
-    d[ST]-SdT&=dU+pdV \\
-    d[U-TS]&=-SdT-pdV
+    d[ST]-SdT & =dU+pdV   \\
+    d[U-TS]   & =-SdT-pdV
 \end{align}
 donde $U-TS=F$, de modo que:
 \begin{equation}
@@ -404,12 +417,12 @@ Igualamos las ecuaciones \eqref{ec76} y \eqref{ec82}:
 \end{align}
 Comparando términos obtenemos que:
 \begin{equation}
-    \left\{ 
+    \left\{
     \begin{array}{l}
-         S=-\left(\displaystyle \pdv{F}{T}\right)_V \\ \\
-         p=-\left(\displaystyle \pdv{F}{V}\right)_T
-    \end{array} 
-    \right. 
+        S=-\left(\displaystyle \pdv{F}{T}\right)_V \\ \\
+        p=-\left(\displaystyle \pdv{F}{V}\right)_T
+    \end{array}
+    \right.
 \end{equation}
 
 \section{Entalpía para un sistema cerrado}
@@ -434,9 +447,9 @@ Se puede comprobar que:
 \end{equation}
 Si reemplazamos \eqref{ec88} en \eqref{ec87}:
 \begin{align}
-    TdS &=dU+d[pV]-Vdp \\
-    TdS+Vdp&=d[U+pV] \\
-    d[U+pV]&=TdS+Vdp
+    TdS     & =dU+d[pV]-Vdp \\
+    TdS+Vdp & =d[U+pV]      \\
+    d[U+pV] & =TdS+Vdp
 \end{align}
 donde $H=U+pV$, de modo que:
 \begin{equation}
@@ -449,12 +462,12 @@ Comparamos las ecuaciones \eqref{ec92} y \eqref{ec86}:
 \end{equation}
 De modo que:
 \begin{equation}
-    \left\{ 
+    \left\{
     \begin{array}{l}
-         T=\displaystyle \left( \pdv{H}{S} \right)_{p} \\ \\
-         V=\displaystyle \left(\pdv{H}{p}\right)_{S} 
-    \end{array} 
-    \right. 
+        T=\displaystyle \left( \pdv{H}{S} \right)_{p} \\ \\
+        V=\displaystyle \left(\pdv{H}{p}\right)_{S}
+    \end{array}
+    \right.
 \end{equation}
 
 \section{Energía de Gibbs para un sistema cerrado}
@@ -474,14 +487,14 @@ La EFT:
 \end{equation}
 Si:
 \begin{align}
-    TdS&=d[TS]-SdT \\
-    pdV&=d[PV]-Vdp
+    TdS & =d[TS]-SdT \\
+    pdV & =d[PV]-Vdp
 \end{align}
 Reemplazando en \eqref{ec97}:
 \begin{align}
-    d[TS]-SdT&=dU+d[PV]-Vdp \\
-    Vdp-SdT&=d[U+pV-TS] \\
-    d[U+pV-TS]&= Vdp-Sdt
+    d[TS]-SdT  & =dU+d[PV]-Vdp \\
+    Vdp-SdT    & =d[U+pV-TS]   \\
+    d[U+pV-TS] & = Vdp-Sdt
 \end{align}
 donde $G=U+pV-TS$, de modo que:
 \begin{equation}
@@ -494,12 +507,12 @@ Comparamos \eqref{ec96} y \eqref{ec103}:
 \end{equation}
 De modo que:
 \begin{equation}
-    \left\{ 
+    \left\{
     \begin{array}{l}
-         V=\displaystyle \left( \pdv{G}{p} \right)_{T} \\ \\
-         S=-\displaystyle \left(\pdv{G}{T}\right)_{p} 
-    \end{array} 
-    \right. 
+        V=\displaystyle \left( \pdv{G}{p} \right)_{T} \\ \\
+        S=-\displaystyle \left(\pdv{G}{T}\right)_{p}
+    \end{array}
+    \right.
 \end{equation}
 
 \chapter{Segunda Ley de la termodinámica para un sistema abierto monocomponente}
@@ -530,13 +543,13 @@ Comparamos ambas ecuaciones y obtenemos:
 \end{equation}
 de modo que:
 \begin{equation}
-    \left\{ 
+    \left\{
     \begin{array}{l}
-         T=\displaystyle \left( \pdv{U}{S} \right)_{V,N} \\ \\
-         p=-\displaystyle \left(\pdv{U}{V}\right)_{S,N} \\ \\
-         \mu=\displaystyle \left( \pdv{U}{N}\right)_{S,V}
-    \end{array} 
-    \right. 
+        T=\displaystyle \left( \pdv{U}{S} \right)_{V,N} \\ \\
+        p=-\displaystyle \left(\pdv{U}{V}\right)_{S,N}  \\ \\
+        \mu=\displaystyle \left( \pdv{U}{N}\right)_{S,V}
+    \end{array}
+    \right.
 \end{equation}
 \section{Energía libre de Helmholtz para un sistema abierto monocomponente}
 Si tenemos el potencial de Helmholtz definido por:
@@ -553,8 +566,8 @@ Si:
 \end{equation*}
 Reemplazamos y obtenemos:
 \begin{align}
-    dU&=d(TS)-SdT-pdV+\mu dN \\
-    d(U-TS)&=-SdT-pdV+\mu dN
+    dU      & =d(TS)-SdT-pdV+\mu dN \\
+    d(U-TS) & =-SdT-pdV+\mu dN
 \end{align}
 De modo que $F=U-TS$, si diferenciamos $F$, obtenemos:
 \begin{equation}
@@ -565,13 +578,13 @@ De modo que si comparamos ambas ecuaciones:
     \left( \pdv{F}{T}\right)_{V,N}dT+\left( \pdv{F}{V} \right)_{T,N}dV+\left( \pdv{F}{N}\right)_{T,V}dN=-SdT-pdV+\mu dN
 \end{equation}
 \begin{equation}
-    \left\{ 
+    \left\{
     \begin{array}{l}
-         S=\displaystyle -\left( \pdv{F}{T}\right)_{V,N} \\ \\
-         p=\displaystyle -\left( \pdv{F}{V} \right)_{T,N} \\ \\
-         \mu=\displaystyle \left( \pdv{F}{N}\right)_{T,V}
-    \end{array} 
-    \right. 
+        S=\displaystyle -\left( \pdv{F}{T}\right)_{V,N}  \\ \\
+        p=\displaystyle -\left( \pdv{F}{V} \right)_{T,N} \\ \\
+        \mu=\displaystyle \left( \pdv{F}{N}\right)_{T,V}
+    \end{array}
+    \right.
 \end{equation}
 \section{Entalpia para un sistema abierto monocomponente}
 Si tenemos la entalpia definida por:
@@ -588,8 +601,8 @@ Si:
 \end{equation}
 Reemplazamos y obtenemos:
 \begin{align}
-    dU&=TdS-d(pV)+Vdp+\mu dN \\
-    d(U+pV)&=TdS+Vdp+\mu dN
+    dU      & =TdS-d(pV)+Vdp+\mu dN \\
+    d(U+pV) & =TdS+Vdp+\mu dN
 \end{align}
 De modo que $H=U+pV$, si diferenciamos $H$, obtenemos:
 \begin{equation}
@@ -600,13 +613,13 @@ Comparamos ambas ecuaciones:
     \left( \pdv{H}{S} \right)_{p,N}dS+\left( \pdv{H}{p}\right)_{S,N}dp+\left ( \pdv{H}{N} \right)_{S,p}dN=TdS+Vdp+\mu dN
 \end{equation}
 \begin{equation}
-    \left\{ 
+    \left\{
     \begin{array}{l}
-         T=\displaystyle \left( \pdv{H}{S} \right)_{p,N} \\ \\
-         V=\displaystyle \left( \pdv{H}{p}\right)_{S,N} \\ \\
-         \mu=\displaystyle \left ( \pdv{H}{N} \right)_{S,p}
-    \end{array} 
-    \right. 
+        T=\displaystyle \left( \pdv{H}{S} \right)_{p,N} \\ \\
+        V=\displaystyle \left( \pdv{H}{p}\right)_{S,N}  \\ \\
+        \mu=\displaystyle \left ( \pdv{H}{N} \right)_{S,p}
+    \end{array}
+    \right.
 \end{equation}
 \section{Energia de Gibbs para un sistema abierto monocomponente}
 Si tenemos el potencial de Gibbs definido por:
@@ -619,13 +632,13 @@ Utilizando la EFT:
 \end{equation}
 Si:
 \begin{align}
-    TdS&=d(TS)-SdT \\
-    pdV&=d(PV)-Vdp
+    TdS & =d(TS)-SdT \\
+    pdV & =d(PV)-Vdp
 \end{align}
 Reemplazando y tenemos:
 \begin{align}
-    dU&=d(TS)-SdT-d(PV)+Vdp+\mu dN \\
-    d(U-TS+PV)&=-SdT+Vdp+\mu dN
+    dU         & =d(TS)-SdT-d(PV)+Vdp+\mu dN \\
+    d(U-TS+PV) & =-SdT+Vdp+\mu dN
 \end{align}
 de modo que $G=U-TS+PV$, si diferenciamos $G$, obtenemos:
 \begin{equation}
@@ -636,13 +649,13 @@ Comparamos ambas ecuaciones:
     \left ( \pdv{G}{T}\right)_{p,N}dT+\left(\pdv{G}{p}\right)_{T,N}dp+\left( \pdv{G}{N}\right)_{T,p}dN=-SdT+Vdp+\mu dN
 \end{equation}
 \begin{equation}
-    \left\{ 
+    \left\{
     \begin{array}{l}
-         S=\displaystyle -\left ( \pdv{G}{T}\right)_{p,N} \\ \\
-         V=\displaystyle \left(\pdv{G}{p}\right)_{T,N} \\ \\
-         p=\displaystyle \left( \pdv{G}{N}\right)_{T,p}
-    \end{array} 
-    \right. 
+        S=\displaystyle -\left ( \pdv{G}{T}\right)_{p,N} \\ \\
+        V=\displaystyle \left(\pdv{G}{p}\right)_{T,N}    \\ \\
+        p=\displaystyle \left( \pdv{G}{N}\right)_{T,p}
+    \end{array}
+    \right.
 \end{equation}
 
 \chapter{Relaciones Termodinámicas de Maxwell}
@@ -653,19 +666,19 @@ En relación a la energia interna:
 \end{equation}
 Sus propiedades energéticas:
 \begin{align}
-    T&=\left( \pdv{U}{S} \right)_V \\
-    p&=-\left( \pdv{U}{V}\right)_S
+    T & =\left( \pdv{U}{S} \right)_V \\
+    p & =-\left( \pdv{U}{V}\right)_S
 \end{align}
 Si derivamos $T$ con respecto al volumen a entropía constante:
 \begin{align}
-    \left[ \pdv{T}{V} \right]_S&=\left\{ \pdv{}{V}\left[\left( \pdv{U}{S}\right)_V \right] \right\}_S \\
-    \left(\pdv{T}{V}\right)_S&=\left(\pdv{^2 U}{S \partial V}\right)
+    \left[ \pdv{T}{V} \right]_S & =\left\{ \pdv{}{V}\left[\left( \pdv{U}{S}\right)_V \right] \right\}_S \\
+    \left(\pdv{T}{V}\right)_S   & =\left(\pdv{^2 U}{S \partial V}\right)
     \label{ec141}
 \end{align}
 Derivamos $p$ con respecto a la entropía a volumen constante:
 \begin{align}
-    \left[ - \pdv{p}{S}\right]_V&=\left\{ \pdv{}{S}\left[\left( \pdv{U}{V}\right)_S \right] \right\}_V \\
-    \left( - \pdv{p}{S}\right)_V&=\left( \pdv{^2 U}{V \partial S}\right)
+    \left[ - \pdv{p}{S}\right]_V & =\left\{ \pdv{}{S}\left[\left( \pdv{U}{V}\right)_S \right] \right\}_V \\
+    \left( - \pdv{p}{S}\right)_V & =\left( \pdv{^2 U}{V \partial S}\right)
     \label{ec143}
 \end{align}
 Comparamos las ecuaciones \eqref{ec141} y \eqref{ec143}:
@@ -680,19 +693,19 @@ En relación a la energía libre de Helmholtz:
 \end{equation}
 Sus propiedades energéticas:
 \begin{align}
-    -S&=\left( \pdv{F}{T} \right)_V \\
-    -p&=\left( \pdv{F}{V}\right)_T
+    -S & =\left( \pdv{F}{T} \right)_V \\
+    -p & =\left( \pdv{F}{V}\right)_T
 \end{align}
 Derivamos $S$ con respecto al volumen a temperatura constante:
 \begin{align}
-    \left[- \pdv{S}{V}\right]_T&=\left\{ \pdv{}{V}\left[\left( \pdv{F}{T}\right)_V \right] \right\}_T \\
-    \left( -\pdv{S}{V}\right)_T&=\left( \pdv{^2 F}{T \partial V}\right)
+    \left[- \pdv{S}{V}\right]_T & =\left\{ \pdv{}{V}\left[\left( \pdv{F}{T}\right)_V \right] \right\}_T \\
+    \left( -\pdv{S}{V}\right)_T & =\left( \pdv{^2 F}{T \partial V}\right)
     \label{ec149}
 \end{align}
 Derivamos $p$ con respecto a la temperatura a volumen constante:
 \begin{align}
-    \left[- \pdv{p}{T}\right]_V&=\left\{ \pdv{}{T}\left[\left( \pdv{F}{V}\right)_T \right] \right\}_V \\
-    \left( -\pdv{p}{T}\right)_V&=\left( \pdv{^2 F}{V \partial T}\right)
+    \left[- \pdv{p}{T}\right]_V & =\left\{ \pdv{}{T}\left[\left( \pdv{F}{V}\right)_T \right] \right\}_V \\
+    \left( -\pdv{p}{T}\right)_V & =\left( \pdv{^2 F}{V \partial T}\right)
     \label{ec151}
 \end{align}
 Comparamos las ecuaciones \eqref{ec149} y \eqref{ec151}:
@@ -708,19 +721,19 @@ En relación a la Entalpía:
 \end{equation}
 Sus propiedades energéticas:
 \begin{align}
-    T&=\left( \pdv{H}{S} \right)_p \\
-    V&=\left( \pdv{H}{p}\right)_S
+    T & =\left( \pdv{H}{S} \right)_p \\
+    V & =\left( \pdv{H}{p}\right)_S
 \end{align}
 Derivamos $T$ con respecto a la presión cuando la entropía es constante:
 \begin{align}
-    \left[ \pdv{T}{p}\right]_S&=\left\{ \pdv{}{p}\left[\left( \pdv{H}{S}\right)_p \right] \right\}_S \\
-    \left( \pdv{T}{p}\right)_S&=\left( \pdv{^2 H}{S \partial p}\right)
+    \left[ \pdv{T}{p}\right]_S & =\left\{ \pdv{}{p}\left[\left( \pdv{H}{S}\right)_p \right] \right\}_S \\
+    \left( \pdv{T}{p}\right)_S & =\left( \pdv{^2 H}{S \partial p}\right)
     \label{ec157}
 \end{align}
 Derivamos $V$ con respecto a la entropía a presión constante:
 \begin{align}
-    \left[ \pdv{V}{S}\right]_p&=\left\{ \pdv{}{S}\left[\left( \pdv{H}{p}\right)_S \right] \right\}_p \\
-    \left( \pdv{V}{S}\right)_p&=\left( \pdv{^2 H}{p \partial S}\right)
+    \left[ \pdv{V}{S}\right]_p & =\left\{ \pdv{}{S}\left[\left( \pdv{H}{p}\right)_S \right] \right\}_p \\
+    \left( \pdv{V}{S}\right)_p & =\left( \pdv{^2 H}{p \partial S}\right)
     \label{ec159}
 \end{align}
 Comparamos las ecuaciones \eqref{ec157} y \eqref{ec159}:
@@ -735,19 +748,19 @@ En relación a la energía de Gibbs:
 \end{equation}
 Sus propiedades energéticas:
 \begin{align}
-    -S&=\left( \pdv{G}{T} \right)_p \\
-    V&=\left( \pdv{G}{p}\right)_T
+    -S & =\left( \pdv{G}{T} \right)_p \\
+    V  & =\left( \pdv{G}{p}\right)_T
 \end{align}
 Derivamos $S$ con respecto a la presión a temperatura constante:
 \begin{align}
-    \left[ -\pdv{S}{p}\right]_T&=\left\{ \pdv{}{p}\left[\left( \pdv{G}{T}\right)_p \right] \right\}_T \\
-    \left(- \pdv{S}{p}\right)_T&=\left( \pdv{^2 G}{T \partial p}\right)
+    \left[ -\pdv{S}{p}\right]_T & =\left\{ \pdv{}{p}\left[\left( \pdv{G}{T}\right)_p \right] \right\}_T \\
+    \left(- \pdv{S}{p}\right)_T & =\left( \pdv{^2 G}{T \partial p}\right)
     \label{ec165}
 \end{align}
 Derivamos $V$ con respecto a la temperatura a presión constante:
 \begin{align}
-    \left[ \pdv{V}{T}\right]_p&=\left\{ \pdv{}{T}\left[\left( \pdv{G}{p}\right)_T \right] \right\}_p \\
-    \left( \pdv{V}{T}\right)_p&=\left( \pdv{^2 G}{p \partial T}\right)
+    \left[ \pdv{V}{T}\right]_p & =\left\{ \pdv{}{T}\left[\left( \pdv{G}{p}\right)_T \right] \right\}_p \\
+    \left( \pdv{V}{T}\right)_p & =\left( \pdv{^2 G}{p \partial T}\right)
     \label{ec167}
 \end{align}
 Si comparamos las ecuaciones \eqref{ec165} y \eqref{ec167}:
@@ -755,11 +768,13 @@ Si comparamos las ecuaciones \eqref{ec165} y \eqref{ec167}:
     \left(- \pdv{S}{p}\right)_T=\left( \pdv{V}{T}\right)_p
 \end{equation}
 \chapter{Tercera ley de la termodinámica}
-En esta parte nos hacemos la siguiente pregunta: \\
+
+En esta parte nos hacemos la siguiente pregunta:
+
 \begin{center}
-  \textbf{¿Qué valor toma la entropía de un sistema y como se puede medir?}  
+    \textbf{¿Qué valor toma la entropía de un sistema y como se puede medir?}
 \end{center}
-Una forma de medir la entropía de un sistema es midiendo su capacidad calorífica. 
+Una forma de medir la entropía de un sistema es midiendo su capacidad calorífica.
 \section{Capacidad calorifica a presión constante}
 Si la medición de $C_p$:
 \begin{equation}
@@ -772,8 +787,8 @@ De modo que:
 \end{equation}
 Integrando obtenemos:
 \begin{align}
-    \int_{T_0}^{T}dS&=\int_{T_0}^T \dfrac{C_p}{T}dT \\
-    S(T)&=S(T_0)+\int_{T_0}^T \dfrac{C_p}{T}dT
+    \int_{T_0}^{T}dS & =\int_{T_0}^T \dfrac{C_p}{T}dT        \\
+    S(T)             & =S(T_0)+\int_{T_0}^T \dfrac{C_p}{T}dT
     \label{ec172}
 \end{align}
 De modo que obtenemos una forma de medir la entropía en función a la temperatura. \\[0.3cm]
@@ -799,16 +814,16 @@ Nernst postulo que:
 esto se puede escribir como:
 \begin{itemize}
     \item \textbf{Nernst enunciado tercera ley:} Cerca al cero absoluto, todas las reacciones en un sistema con equilibrio interno hace que la entropía no varié.
-    \begin{equation}
-        \left( \pdv{U}{S}\right)_{V,N}=0
-    \end{equation}
+          \begin{equation}
+              \left( \pdv{U}{S}\right)_{V,N}=0
+          \end{equation}
 \end{itemize}
 En 1911 Planck agrego:
 \begin{itemize}
     \item \textbf{Planck enunciado tercera ley:} La entropía de todos los sistemas en equilibrio interno es la misma en el cero absoluto y puede tomar el valor de 0.
-    \begin{equation}
-        \lim_{T \rightarrow 0} S(T)=0
-    \end{equation}
+          \begin{equation}
+              \lim_{T \rightarrow 0} S(T)=0
+          \end{equation}
 \end{itemize}
 En 1937 Simon agrego:
 \begin{itemize}
@@ -817,46 +832,46 @@ En 1937 Simon agrego:
 \section{Consecuencias de la tercera ley}
 \begin{itemize}
     \item La capacidad calorífica tiende a cero cuando $T\rightarrow 0$:
-    \begin{equation}
-        C=T \left( \pdv{S}{T}\right)=\left(\pdv{S}{\ln{T}}\right)\rightarrow 0
-    \end{equation}
-    como $T \rightarrow 0$ entonces $\ln{T}\rightarrow \infty$ y $S \rightarrow 0$.
+          \begin{equation}
+              C=T \left( \pdv{S}{T}\right)=\left(\pdv{S}{\ln{T}}\right)\rightarrow 0
+          \end{equation}
+          como $T \rightarrow 0$ entonces $\ln{T}\rightarrow \infty$ y $S \rightarrow 0$.
     \item La expansión térmica se detiene, como $S \rightarrow 0$ y $T \rightarrow 0$, tenemos por ejemplo que:
-    \begin{equation}
-        \left( \pdv{S}{p}\right)_T \rightarrow 0
-    \end{equation}
-    Utilizando la relación de Maxwell:
-    \begin{equation}
-        \dfrac{1}{V}\left( \pdv{V}{T}\right)_p \rightarrow 0
-    \end{equation}
+          \begin{equation}
+              \left( \pdv{S}{p}\right)_T \rightarrow 0
+          \end{equation}
+          Utilizando la relación de Maxwell:
+          \begin{equation}
+              \dfrac{1}{V}\left( \pdv{V}{T}\right)_p \rightarrow 0
+          \end{equation}
     \item Imposibilidad de alcanzar el cero absoluto:
-    \begin{center}
-        Es imposible enfriar a $T=0$ en un número infinito de pasos.
-    \end{center}
-    Si la tercera ley no se cumpliera seria posible proceder con el caso 1 y enfriar todo y llegar al cero absoluto. Sin embargo debido a al tercera ley la situación es como en el caso 2 y se deduce que es imposible llegar al cero absoluto debido a que se requiere un numero infinito de pasos.
+          \begin{center}
+              Es imposible enfriar a $T=0$ en un número infinito de pasos.
+          \end{center}
+          Si la tercera ley no se cumpliera seria posible proceder con el caso 1 y enfriar todo y llegar al cero absoluto. Sin embargo debido a al tercera ley la situación es como en el caso 2 y se deduce que es imposible llegar al cero absoluto debido a que se requiere un numero infinito de pasos.
     \item La ley de Curie se desmorona. \\[0.3cm]
-    La ley establece que la susceptibilidad $\mathcal{X}$ es proporcional a $1/T$:
-    \begin{equation}
-        \mathcal{X}\propto \dfrac{1}{T}
-    \end{equation}
-    por lo tanto $\mathcal{X} \rightarrow \infty$ cuando $T\rightarrow 0$. Sin embargo la tercera ley implica que:
-    \begin{equation}
-        \left( \pdv{S}{B}\right)_T \rightarrow 0
-    \end{equation}
-    Por lo tanto:
-    \begin{equation}
-        \left( \pdv{S}{B}\right)_T=\left( \pdv{m}{T}\right)_B=\dfrac{VB}{\mu_0} \left( \pdv{\mathcal{X}}{T}\right)_B
-    \end{equation}
-    debe tender a cero $\displaystyle \left( \pdv{\mathcal{X}}{T}\right)\rightarrow 0$. Lo cual esta en desacuerdo con la ley de Curie.
+          La ley establece que la susceptibilidad $\mathcal{X}$ es proporcional a $1/T$:
+          \begin{equation}
+              \mathcal{X}\propto \dfrac{1}{T}
+          \end{equation}
+          por lo tanto $\mathcal{X} \rightarrow \infty$ cuando $T\rightarrow 0$. Sin embargo la tercera ley implica que:
+          \begin{equation}
+              \left( \pdv{S}{B}\right)_T \rightarrow 0
+          \end{equation}
+          Por lo tanto:
+          \begin{equation}
+              \left( \pdv{S}{B}\right)_T=\left( \pdv{m}{T}\right)_B=\dfrac{VB}{\mu_0} \left( \pdv{\mathcal{X}}{T}\right)_B
+          \end{equation}
+          debe tender a cero $\displaystyle \left( \pdv{\mathcal{X}}{T}\right)\rightarrow 0$. Lo cual esta en desacuerdo con la ley de Curie.
 \end{itemize}
 \chapter{Condiciones de Equilibrio de dos fases de un sistema termodinámico monocomponente}
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}{0.49\textwidth}
     Planteamiento:
     \begin{center}
-        \includegraphics[scale=0.16]{Termodinámica/images/diagram-20221024.png}
+        \includegraphics[scale=0.16]{../images/diagram-20221024.png}
     \end{center}
 \end{minipage}
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}{0.49\textwidth}
     Se tiene un sistema formado por dos subsistemas cerrados y aislados que se encuentran en fase liquida y la otra en forma de vapor. \\[0.2cm]
     \textbf{¿Que ocurre en la interfase?}
 \end{minipage}
@@ -876,13 +891,13 @@ Se observa que los "dos subsistemas" tienen que cumplir la Ecuación fundamental
 \end{align}
 \begin{itemize}
     \item Para la fase liquida:
-    \begin{equation}
-        dS_{\ell}=\dfrac{dU_{\ell}+p_{\ell}dV_{\ell}-\mu_{\ell} dN_{\ell}}{T_{\ell}}
-    \end{equation}
+          \begin{equation}
+              dS_{\ell}=\dfrac{dU_{\ell}+p_{\ell}dV_{\ell}-\mu_{\ell} dN_{\ell}}{T_{\ell}}
+          \end{equation}
     \item Para la fase de vapor:
-    \begin{equation}
-        dS_{v}=\dfrac{dU_{v}+p_{v} dV_{v}-\mu_{v} dN_{v}}{T_{v}}
-    \end{equation}
+          \begin{equation}
+              dS_{v}=\dfrac{dU_{v}+p_{v} dV_{v}-\mu_{v} dN_{v}}{T_{v}}
+          \end{equation}
 \end{itemize}
 Reemplazamos en:
 \begin{align}
@@ -892,35 +907,35 @@ Reemplazamos en:
 \section{Condiciones del sistema}
 \begin{itemize}
     \item \textbf{Energía interna del sistema} \\[0.3cm]
-    Si notamos que la energía interna del sistema cumple la siguiente relación:
-    \begin{equation}
-        U=U_{\ell}+U_v=cte
-    \end{equation}
-    Si diferenciamos esta relación, obtenemos:
-    \begin{align}
-        dU_{\ell}+dU_v&=0 \\
-        dU_v&=-dU_{\ell}
-    \end{align}
+          Si notamos que la energía interna del sistema cumple la siguiente relación:
+          \begin{equation}
+              U=U_{\ell}+U_v=cte
+          \end{equation}
+          Si diferenciamos esta relación, obtenemos:
+          \begin{align}
+              dU_{\ell}+dU_v & =0          \\
+              dU_v           & =-dU_{\ell}
+          \end{align}
     \item \textbf{Volumen del sistema}\\[0.3cm]
-    El volumen del sistema cumple la siguiente relación:
-    \begin{equation}
-        V=V_{\ell}+V_v=cte
-    \end{equation}
-    Si diferenciamos esta relación, obtenemos:
-    \begin{align}
-        dV_{\ell}+dV_v=0 \\
-        dV_v=-dV_{\ell}
-    \end{align}
+          El volumen del sistema cumple la siguiente relación:
+          \begin{equation}
+              V=V_{\ell}+V_v=cte
+          \end{equation}
+          Si diferenciamos esta relación, obtenemos:
+          \begin{align}
+              dV_{\ell}+dV_v=0 \\
+              dV_v=-dV_{\ell}
+          \end{align}
     \item \textbf{Numero de componentes del sistema} \\[0.3cm]
-    El numero de componentes total del sistema cumple la siguiente relación:
-    \begin{equation}
-        N=N_{\ell}+N_v=cte
-    \end{equation}
-    Si diferenciamos esta relación, obtenemos:
-    \begin{align}
-        dN_{\ell}+dN_v&=0 \\
-        dN_v&=-dN_{\ell}
-    \end{align}
+          El numero de componentes total del sistema cumple la siguiente relación:
+          \begin{equation}
+              N=N_{\ell}+N_v=cte
+          \end{equation}
+          Si diferenciamos esta relación, obtenemos:
+          \begin{align}
+              dN_{\ell}+dN_v & =0          \\
+              dN_v           & =-dN_{\ell}
+          \end{align}
 \end{itemize}
 Reemplazando obtenemos:
 \begin{align}
@@ -931,19 +946,19 @@ Se observa que $dU_{\ell} \neq 0$, $dV_{\ell} \neq 0$ y $dN_{\ell} \neq 0$. De m
 \section{Condiciones de equilibrio}
 \begin{itemize}
     \item[a)] \textbf{Condición de equilibrio térmico}
-    \begin{align}
-        \left[ \dfrac{1}{T_{\ell}}-\dfrac{1}{T_v} \right]=0 \\
-        T_{\ell}=T_v
-    \end{align}
+        \begin{align}
+            \left[ \dfrac{1}{T_{\ell}}-\dfrac{1}{T_v} \right]=0 \\
+            T_{\ell}=T_v
+        \end{align}
     \item[b)] \textbf{Condición de equilibrio mecánico}
-    \begin{align}
-        \left[ \dfrac{p_{\ell}}{T_{\ell}}-\dfrac{p_v}{T_v} \right]&=0 \\
-        p_{\ell}&=p_v
-    \end{align}
+        \begin{align}
+            \left[ \dfrac{p_{\ell}}{T_{\ell}}-\dfrac{p_v}{T_v} \right] & =0   \\
+            p_{\ell}                                                   & =p_v
+        \end{align}
     \item[c)] \textbf{Condición de equilibrio químico}
-    \begin{align}
-        \left[ \dfrac{\mu_{\ell}}{T_{\ell}}-\dfrac{\mu_v}{T_v} \right]=0 \\
-        \mu_{\ell}=\mu_v
-    \end{align}
+        \begin{align}
+            \left[ \dfrac{\mu_{\ell}}{T_{\ell}}-\dfrac{\mu_v}{T_v} \right]=0 \\
+            \mu_{\ell}=\mu_v
+        \end{align}
 \end{itemize}
 \end{document}

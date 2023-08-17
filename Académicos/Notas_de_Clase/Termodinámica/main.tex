@@ -25,39 +25,43 @@
 
 \DeclareCaptionType{InfoBox}
 
+% TEMPORARY FIX %
+\DeclareFontShape{OT1}{cmss}{m}{sc}{<->ssub * cmss/m/n}{}
+\DeclareFontShape{OT1}{cmr}{m}{scit}{<->ssub * cmr/m/it}{}
+
 % DOCUMENT %
 \begin{document}
 
-\fboxsep=8pt\relax
-\fboxrule=2pt\relax
+\fboxsep=8pt\relax{}
+\fboxrule=2pt\relax{}
 
 \begin{titlepage}
-\newgeometry{left=7.5cm}
-	\scshape
+	\newgeometry{left=7.5cm}
+	\scshape{}
 	\pagecolor{main_background}
 	\color{white}
-	\noindent
-	{\Huge Termodinámica y Física Estadística}
-	\vskip0.2\baselineskip\noindent
+	\noindent{}
+	{\Huge{Termodinámica y Física Estadística}}
+	\vskip0.2\baselineskip\noindent{}
 	\makebox[0pt][l]{\rule{1\textwidth}{0.5pt}}
-	\par\vskip .4cm \noindent
+	\par\vskip.4cm \noindent{}
 	\textit{Universidad Nacional Mayor de San Marcos}
-	\vskip0.1\baselineskip\noindent
+	\vskip0.1\baselineskip\noindent{}
 	\textit{Facultad de Ciencias Físicas}
-	\vskip2\baselineskip
-	\noindent
+	\vskip2\baselineskip{}
+	\noindent{}
 	\textsf{Editado por: José Avalos y David Durán}
-	\vfill\noindent
+	\vfill\noindent{}
 	\textsf{}
-	\vskip0.1\baselineskip\noindent
+	\vskip0.1\baselineskip\noindent{}
 	\makebox[0pt][l]{\rule{1\textwidth}{0.5pt}}
-	\vskip\baselineskip\noindent
+	\vskip\baselineskip\noindent{}
 	\textsf{Última actualización: \today}
-	\restoregeometry
+	\restoregeometry{}
 	\pagecolor{white}\color{black}
 \end{titlepage}
 
-\tableofcontents
+\tableofcontents{}
 % ----------------------------------------- %
 \subfile{S1/cap_1}
 \subfile{S1/cap_2}
