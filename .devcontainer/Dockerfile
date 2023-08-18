@@ -35,15 +35,15 @@ ARG TARGETPLATFORM
 ARG TARGETOS
 ARG TARGETARCH
 
-LABEL org.opencontainers.image.authors "John Muchovej <latex-devcontainer.tro05@simplelogin.com>"
+LABEL org.opencontainers.image.authors "David Duran <contacto@altmails.com>"
 LABEL org.opencontainers.image.url \
-    "https://github.com/jmuchovej/containers/"
+    "https://github.com/caefisica/LaTeX/"
 LABEL org.opencontainers.image.documentation \
-    "https://github.com/jmuchovej/containers/blob/main/latex/README.md"
+    "https://github.com/caefisica/LaTeX/blob/master/README.md"
 LABEL org.opencontainers.image.source \
-    "https://github.com/jmuchovej/containers/tree/main/latex"
+    "hhttps://github.com/caefisica/LaTeX/tree/master/.devcontainer"
 
-ARG SCHEME="scheme-basic"
+# ARG SCHEME="scheme-basic"
 ARG DOCFILES=0
 ARG SRCFILES=0
 ARG TEXLIVE_VERSION=2023
@@ -68,7 +68,7 @@ RUN <<EOF
 set -e
 apt update -y
 apt install -y --no-install-recommends \
-    fontconfig vim neovim python3-pygments ttf-mscorefonts-installer
+    fontconfig vim neovim python3-pygments ttf-mscorefonts-installer texlive-lang-spanish ghostscript
 apt clean autoclean
 apt autoremove -y
 rm -rf /var/lib/apt/lists/*
@@ -97,7 +97,7 @@ WORKDIR /tmp/texlive
 #* The acceptable contents of `./profile.txt` can be found here:
 #*   https://tug.org/texlive/doc/install-tl.html#PROFILES
 COPY <<EOF /tmp/texlive/profile.txt
-selected_scheme ${SCHEME}
+# selected_scheme ${SCHEME}
 instopt_letter 1  # Set default page size to letter
 instopt_adjustpath 0
 tlpdbopt_autobackup 0
@@ -141,18 +141,12 @@ EOF
 RUN <<EOF
 set -e
 tlmgr update --self --all
-tlmgr install latexmk latexindent subfiles pgf physics cancel caption etoolbox newfloat babel-spanish biber hyphen-spanish biblatex lineno booktabs epstopdf
+tlmgr install latexmk latexindent
 tlmgr update --all
 texhash
 EOF
 
 COPY --from=chktex-builder /tmp/chktex-builder/chktex /usr/local/bin/chktex
-
-#! Install Spanish for Babel & ghostscript for eps files
-RUN <<EOF
-set -e
-apt install -y texlive-lang-spanish ghostscript
-EOF
 
 #! Check that the following commands work and have the right permissions
 RUN <<EOF
