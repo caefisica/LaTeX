@@ -273,7 +273,7 @@
 			\begin{minipage}{\textwidth+\marginparwidth+\marginparsep}\hrule\smallskip\smallskip}
 			{\smallskip\smallskip\hrule\end{minipage}\vspace{.1in}
 			}
-			\end{verbatim}
+		\end{verbatim}
 	\end{fullpage}
 	\begin{remark}
 		Eliminating the \texttt{$\backslash$hrule} in the code will remove the lines surrounding the \texttt{fullpage} environment. Similarly, it is possible to change the vertical spacing after the \texttt{fullpage} is over, by modifying the \texttt{$\backslash$vspace\{\}} argument. 
@@ -353,19 +353,19 @@
 	\section{\texttt{Fancyhdr} Layout}
 	As mentioned before, \texttt{fancyhdr} is overridden on the title page, the contents page, and the \texttt{$\backslash$part} page, and sets the header for all other pages through the code
 	\begin{verbatim}
-	\pagestyle{fancy}%
-	\newlength{\offset}%
-	\setlength{\offset}{\marginparwidth + \marginparsep}%
-	\renewcommand{\sectionmark}[1]{\markboth{#1}{}}%
-	\renewcommand{\subsectionmark}[1]{\markright{#1}{}}%
-
-	\fancypagestyle{fancynotes}{%
-	  \fancyhf{}%
-	  \fancyheadoffset[rh]{\offset}%
-	  \renewcommand{\headrulewidth}{0pt}%
-	  \fancyhead[L]{\textsc{\leftmark}}%
-	  \fancyhead[R]{\footnotesize \textit{\rightmark}~~~~ \thepage}%
-	}%
+    	\pagestyle{fancy}%
+    	\newlength{\offset}%
+    	\setlength{\offset}{\marginparwidth + \marginparsep}%
+    	\renewcommand{\sectionmark}[1]{\markboth{#1}{}}%
+    	\renewcommand{\subsectionmark}[1]{\markright{#1}{}}%
+    
+    	\fancypagestyle{fancynotes}{%
+    	  \fancyhf{}%
+    	  \fancyheadoffset[rh]{\offset}%
+    	  \renewcommand{\headrulewidth}{0pt}%
+    	  \fancyhead[L]{\textsc{\leftmark}}%
+    	  \fancyhead[R]{\footnotesize \textit{\rightmark}~~~~ \thepage}%
+    	}%
 	\end{verbatim}
 	The header style is set so that it spans the width of the entire page as opposed to just the \texttt{$\backslash$textwidth} through the line \texttt{$\backslash$fancyheadoffset[rh]\{$\backslash$myoddoffset\}}. The \texttt{$\backslash$sectionmark} and \texttt{$\backslash$subsectionmark} are set up so that the \texttt{section} appears on the left and \texttt{subsections} appear on the right along with the page number, and this is given in the last two lines of code.
 
