@@ -1,6 +1,16 @@
 \documentclass[../main]{subfiles}
 \begin{document}
-\section{La ecuación Geodésica}
+        \begin{margintable}\vspace{1.3in}\footnotesize
+		\begin{tabularx}{\marginparwidth}{|X}
+            Section~\ref{part3.2}. Acción de una partícula puntual \\
+            Section~\ref{part3.3}. Cantidades conservadas\\
+            Section~\ref{part3.4}. Límite Newtoniano\\
+            Section~\ref{part3.5}. Geodésicas en Schwarzschild\\
+            Section~\ref{part3.6}. Orbitas circulares\\
+            Section~\ref{part3.7}. Precesión de la orbita de Mercurio\\
+            Section~\ref{part3.8}. Bending of light\\
+		\end{tabularx}
+	\end{margintable}
 
 En Relatividad General tenemos dos ideas clave: 
 \begin{enumerate}
@@ -8,7 +18,7 @@ En Relatividad General tenemos dos ideas clave:
     \item La materia dictamina como el espacio-tiempo debe curvarse.
 \end{enumerate}
 
-\section{Acción de una partícula puntual}
+\section{Acción de una partícula puntual}\label{part3.2}
 
 La acción de una partícula puntual relativista está dada por:
 \begin{equation}
@@ -16,21 +26,22 @@ La acción de una partícula puntual relativista está dada por:
 \end{equation}
 donde $\tau$ es el tiempo propio. 
 
+\begin{adjustwidth}{0pt}{-100pt}
 \textcolor{red}{Check 1:} En Minkowski tenemos: 
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         \mathrm{d}\tau&=\sqrt{\mathrm{d}t^2-\mathrm{d}\vec{x}^2}\\
         &=\mathrm{d}t\sqrt{1-\left(\dv{x}{t}\right)^2} \\
         &=\mathrm{d}t\sqrt{1-v^2}
-    \end{split}
+    \end{aligned}
 \end{equation}
 
 Y en nuestra acción, tenemos 
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         S&=-m \int \mathrm{d}t\sqrt{1-v^2},\quad v<<1 \\
         &=\int \mathrm{d}t\left(-m+\dfrac{1}{2}mv^2+\Phi\right)        
-    \end{split}
+    \end{aligned}
 \end{equation}
 
 \textcolor{red}{Check 2:} Usando la métrica de campo débil
@@ -39,13 +50,13 @@ Y en nuestra acción, tenemos
 \end{equation}
 tenemos:
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         S&=-m\int \mathrm{d}t \sqrt{(1+2\Phi)-(1-2\Phi)V^2} \\
         S&\sim \int \mathrm{d}\tau \left(-m+\dfrac{1}{2}mV^2+m\Phi+\cdots \Theta(\Phi^2)\right) 
-    \end{split}
+    \end{aligned}
 \end{equation}
 
-\section{La ecuación geodésica}
+\section{La ecuación geodésica}\label{part3.3}
 Considere una curva $x^{\mu}(\lambda)$ en un espacio-tiempo general con métrica $g_{\mu\nu}(t, \vec{x})$:
 \begin{center}
     \includegraphics[scale=0.5]{img/imgRG3.1.PNG}
@@ -69,10 +80,10 @@ donde $\partial_{\alpha}$ es la derivada parcial respecto a las coordenadas cont
 \end{equation}
 considerando $x^{\mu} \ \rightarrow \ x^{\mu}+\delta x^{\mu}$ tal que $\delta S=S[x^{\mu}+\delta x^{\mu}]-S[x^{\mu}]$ tenemos que $\delta S=0$ para cualquier $\delta x^{\mu}$ sí:
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         \delta \int \mathrm{d}\tau&=\dfrac{1}{2}\int \mathrm{d}\lambda \left(-g_{\mu\nu}\dv{x^{\mu}}{\lambda}\dv{x^{\nu}}{\lambda}\right)^{-1/2} \left[-\delta g_{\mu\nu} \dv{x^{\mu}}{\lambda}\dv{x^{\nu}}{\lambda}-2g_{\mu\nu}\dv{\delta x^{\mu}}{\lambda}\dv{x^{\nu}}{\lambda}\right]\\
         \delta S&=\dfrac{1}{2}\int \mathrm{d} \lambda \left\{-\partial_{\lambda}g_{\mu\nu}\dot{x}^{\mu}\dot{x}^{\nu}\delta x^{\lambda}+2g_{\mu\nu}\ddot{x}^{\nu}\delta x^{\mu}+\partial_{\lambda}g_{\mu\nu}\dot{x}^{\lambda}\dot{x}^{\nu}\delta x^{\mu} \right\}
-    \end{split}
+    \end{aligned}
 \end{equation}
 
 Donde hemos usado la propiedad: $\delta g_{\mu\nu}=\partial_{\lambda}g_{\mu\nu}\delta x^{\lambda}$
@@ -95,15 +106,15 @@ Nota: Observe que la misma ecuación geodésica puede ser derivada del lagrangia
     \label{ec3.14}
 \end{equation}
 
-\section{Cantidades conservadas}
+\section{Cantidades conservadas}\label{part3.4}
 Si $L$ no depende explicitamente de $\lambda$ tal que $\pdv{L}{\lambda}=0$, luego: 
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         \dv{L}{\lambda}&=\pdv{L}{\lambda}+\dv{x^{\mu}}{\lambda}\pdv{L}{x^{\mu}}+\dv{\dot{x}^{\mu}}{\lambda}\pdv{L}{\dot{x}^{\mu}}\\
         \dv{L}{\lambda}&=\dot{x}^{\mu}\dv{}{\lambda}\left(\pdv{L}{\dot{x}^{\mu}}\right)+\dv{\dot{x}^{\mu}}{\lambda}\pdv{L}{\dot{x}^{\mu}}\\
         \dv{L}{\lambda}&=\dv{}{\lambda}\left(\pdv{L}{\dot{x}^{\mu}}\dot{x}^{\mu}\right)\\
         0&=\dv{}{\lambda}\left(L-\pdv{L}{\dot{x}^{\mu}}\dot{x}^{\mu}\right)
-    \end{split}
+    \end{aligned}
 \end{equation}
 De la conservación de la energía, tenemos:
 \begin{equation}
@@ -112,16 +123,16 @@ De la conservación de la energía, tenemos:
 
 Si $g_{\mu\nu}$ no depende de alguna coordenada, luego $\partial_{\alpha}g_{\mu\nu}=0$ las ecuaciones de Euler-Lagrange:
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         \dv{}{\lambda}\left(\pdv{L}{\dot{x}^{\alpha}}\right)-\pdv{L}{x^{\alpha}}&=0\\
         \dv{}{\lambda}\left(-2g_{\alpha\nu}\dv{x^{\nu}}{\lambda}\right)&=-\underbrace{\partial_{\alpha}g_{\mu\nu}}_{0} \dv{x^{\mu}}{\lambda}\dv{x^{\nu}}{\lambda}\\
         \dv{}{\lambda}\left(-2g_{\alpha\nu}\dv{x^{\nu}}{\lambda}\right)&=0
-    \end{split}
+    \end{aligned}
 \end{equation}
 
 La cantidad $-2g_{\alpha\nu}\dv{x^{\nu}}{\lambda}=Const$ corresponde al momento conjugado a la coordenada $x^{\alpha}$.
 
-\section{El límite Newtoniano}
+\section{El límite Newtoniano}\label{part3.5}
 
 Condiciones:
 \begin{enumerate}
@@ -156,7 +167,7 @@ Condiciones:
         \dv{^2 \vec{x}}{t^2}=-\vec{\nabla}\Phi
     \end{equation}
 \end{enumerate}
-\section{Geodésicas en la métrica de Schwarzschild}
+\section{Geodésicas en la métrica de Schwarzschild}\label{part3.6}
 La métrica alrededor de un objeto de masa $M$ viene dada por:
 \begin{equation}
     \mathrm{d}s^2=-\left(1-\dfrac{2GM}{r}\right)\mathrm{d}t^2+\left(1-\dfrac{2GM}{r}\right)^{-1}\mathrm{d}r^2+r^2(\mathrm{d}\theta^2+\sin^2 \theta \mathrm{d}\phi^2)
@@ -218,7 +229,7 @@ donde $\epsilon=E^2/2$ y $V(r)$ es el potencial efectivo:
     V(r)=\epsilon\dfrac{c^2}{2}+\epsilon\dfrac{GM}{r}+\dfrac{L^2}{2r^2}-\dfrac{L^2 GM}{c^2 r^3}
 \end{equation}
 donde $\dfrac{GM}{r}$ es potencial Newtoniano, $\dfrac{L^2}{2r^2}$ es el potencial centrífugo y $\dfrac{L^2 GM}{c^2 r^3}$ es la correción de la relatividad general.
-\section{Orbitas Circulares}
+\section{Orbitas Circulares}\label{part3.7}
 
 Una partícula puede moverse en una orbita circular $r=r_c$ cuando $\mathrm{d}V/\mathrm{d}r=0$.
 \begin{enumerate}
@@ -245,22 +256,24 @@ Una partícula puede moverse en una orbita circular $r=r_c$ cuando $\mathrm{d}V/
 
     \begin{minipage}{0.5\textwidth}
         \begin{center}
-            \includegraphics[scale=0.37]{img/imgRG3.2.PNG}
+            \includegraphics[scale=0.38]{img/imgRG3.2.PNG}
         \end{center}
     \end{minipage}
-    \begin{minipage}{0.5\textwidth}
+    \begin{minipage}{0.4\textwidth}
+    \begin{adjustwidth}{40pt}{-100pt}
         \begin{itemize}
             \item Para $L>\sqrt{12}GM$ órbitas estables $r_{c,+}$ inestables $r_{c,-}$.
             \item Para $L=\sqrt{12}GM$ las dos soluciones se reducen a una órbita $r_c=6GM$.
             \item Para $L<\sqrt{12}GM$ no hay órbitas circulares estables.
         \end{itemize}
+    \end{adjustwidth}
     \end{minipage}
 \end{enumerate}
-\section{Precesión de la órbita de Mercurio}
+\section{Precesión de la órbita de Mercurio}\label{part3.8}
 
 La Relatividad General explica la precesión del perihelio del Mercurio.
 \begin{center}
-    \includegraphics[scale=0.5]{img/imgRG3.3.PNG}
+    \includegraphics[scale=0.35]{img/imgRG3.3.PNG}
 \end{center}
 
 Para demostrar como $r$ es función de $\phi$, usamos:
@@ -293,10 +306,10 @@ Que tiene la siguiente solución particular:
 
 Tenemos que:
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         u&=1+e\cos \phi+\alpha e\phi \sin\phi \ \rightarrow \ \alpha=\dfrac{3(GM)^2}{L^2}<<1\\
         u&\simeq 1+e\cos\left[(1-\alpha)\phi\right]
-    \end{split}
+    \end{aligned}
 \end{equation}
 
 Durante cada orbita, el perihelio cambia $\Delta \phi$ dado por:
@@ -310,17 +323,17 @@ para una orbita elíptica $L^2 \simeq GM(1-e^2)a$
 
 Para Mercurio, los parámetros relevantes:
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         GM_0=1.48\times 10^3 \text{m},\quad a=5.79\times 10^{10}\text{m},\quad e=0.2056\\
         \Delta \phi_{mercurio}=5.01\times 10^{-7} rad/orbita=0.103''/orbita 
-    \end{split}
+    \end{aligned}
 \end{equation}
 Usando $T=88$ días y $\Delta \phi_{mercurio}=43.0''/siglo$, la precesión observada restando los efectos gravitacionales de los demás planetas es 
 \begin{equation}
     \Delta \phi_{mercurio}-532''/siglo\approx 43''/siglo
 \end{equation}
 
-\section{Bending of Light}
+\section{Bending of Light}\label{part3.9}
 
 La primera evidencia experimental de la validez para GR provino de la desviación de la luz de las estrellas de fondo por el sol.
 
@@ -452,5 +465,5 @@ y también el observado por Eddington en 1919
         donde $M$ es la masa del objeto central (en unidades donde $G=c=1$). ¿Puedes identificar solamente por inspección, al menos dos vectores de Killing? Una vez que los encuentres, determine las componentes covariantes $(\xi_{\mu})$ y contravariantes $(\xi^{\mu})$, calcule sus normas y explique brevemente a qué simetrías están asociados.
     \end{enumerate}
 \end{enumerate}
-
+\end{adjustwidth}
 \end{document}

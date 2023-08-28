@@ -1,6 +1,17 @@
 \documentclass[../main]{subfiles}
 \begin{document}
-
+        \begin{margintable}\vspace{1.3in}\footnotesize
+		\begin{tabularx}{\marginparwidth}{|X}
+		  Section~\ref{part5.1}. Geometría Riemanniana\\
+            Section~\ref{part5.2}. Visión general \\
+            Section~\ref{part5.3}. Derivada Covariante\\
+            Section~\ref{part5.4}. Transporte paralelo y Geodésicas\\
+            Section~\ref{part5.5}. Simetrías y vectores de Killing\\
+            Section~\ref{part5.6}. Curvatura de Riemann\\
+            Section~\ref{part5.7}. Curvatura de Riemann\\
+		\end{tabularx}
+	\end{margintable}
+ 
 La primera suposición de Einstein fue 
 \begin{equation}
     R_{\mu\nu}=kT_{\mu\nu},
@@ -18,6 +29,7 @@ Así que
     \nabla^{\mu} R_{\mu\nu}=\dfrac{1}{2}\nabla_{\nu}R
     \label{ec5.3}
 \end{equation}
+\begin{adjustwidth}{0pt}{-100pt}
 entonces $\nabla^{\mu} R_{\mu\nu} \neq 0$ lo cual seria inconsistente con $\nabla^{\mu} T_{\mu\nu}=0$, sin embargo, \eqref{ec5.3} implica 
 \begin{equation}
     0=\nabla^{\mu}\left(R_{\mu\nu}-\dfrac{1}{2}g_{\mu\nu}R\right)=\nabla^{\mu} G_{\mu\nu}
@@ -30,7 +42,7 @@ Entonces una suposición mejorada es
     \label{ec5.5}
 \end{equation}
 
-\section{Límite Newtoniano}
+\section{Límite Newtoniano}\label{part5.1}
 
 Ahora vamos a mostrar que la suposición de \eqref{ec5.5} tiene el límite Newtoniano correcto.
 
@@ -104,7 +116,7 @@ usando el teorema $\nabla \cdot \left(\dfrac{r}{|r^3|}\right)=4\pi \delta(r)$ de
     \end{split}
 \end{equation}
 
-\section{La ecuación de Einstein}
+\section{La ecuación de Einstein}\label{part5.2}
 
 La forma final de la ecuación de Einstein es 
 \begin{equation}
@@ -118,7 +130,7 @@ Esta ecuación describe un gran rango de fenómenos desde orbitas planetarias ha
     \item La curvatura proviene de $T_{\mu\nu}$: Energía y momentum.
 \end{itemize}
 
-\section{Acción de Einstein-Hilbert}
+\section{Acción de Einstein-Hilbert}\label{part5.3}
 
 Alternativamente, la ecuación de Einstein se deriva de una acción. La acción para la gravedad es la \textcolor{red}{Acción de Einstein-Hilbert}
 \begin{equation}
@@ -245,7 +257,7 @@ Recordemos que
     \end{equation}
 \end{itemize}
 
-\section{La constante cosmológica}
+\section{La constante cosmológica}\label{part5.4}
 
 Ya que $\nabla^{\mu} g_{\mu\nu}=0$, podemos agregar $\textcolor{red}{\Lambda g_{\mu\nu}}$ a $G_{\mu\nu}$ sin afectar $\nabla^{\mu}T_{\mu\nu}=0$. La ecuación de Einstein es 
 \begin{equation}
@@ -256,7 +268,7 @@ la cual viene de la siguiente acción:
     S = \dfrac{1}{16\pi G} \int \mathrm{d}^4 x\sqrt{-g} (R-\textcolor{red}{2\Lambda})+S_M
 \end{equation}
 
-\section{Soluciones en el vacío}
+\section{Soluciones en el vacío}\label{part5.5}
 
 En general, las ecuaciones de Einstein son muy difíciles de resolver. Sin embargo, existen algunas soluciones exactas con una gran cantidad de simetría. Primero consideramos la ecuación de Einstein del vacío con una constante cosmológica.
 
@@ -298,10 +310,9 @@ obtenemos:
 
 Reetiquetando 
 
-\section{Espacio de DeSitter}
+\section{Espacio de DeSitter}\label{part5.6}
 
-\section{Espacio de Anti-DeSitter}
+\section{Espacio de Anti-DeSitter}\label{part5.7}
 
-
-
+\end{adjustwidth}
 \end{document}

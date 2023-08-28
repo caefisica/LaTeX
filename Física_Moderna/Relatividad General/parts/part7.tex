@@ -1,12 +1,22 @@
 \documentclass[../main]{subfiles}
 \begin{document}
-\section{Espacios máximalmente simétricos}
+\section{Espacios máximalmente simétricos}\label{part7.1}
+        \begin{margintable}\vspace{.8in}\footnotesize
+		\begin{tabularx}{\marginparwidth}{|X}
+		  Section~\ref{part7.1}. Espacios máximalmente simétricos\\
+            Section~\ref{part7.2}. Métrica FLRW\\
+            Section~\ref{part7.3}. Ecuaciones de Friedmann\\
+            Section~\ref{part7.4}. Contenido de energía\\
+            Section~\ref{part7.5}. Modelo $\Lambda$CDM\\
+		\end{tabularx}
+	\end{margintable}
 
 Sí en una manifold $\mathcal{M}$ de dimensión $N$, existen $N(N+1)/2$ vectores de Killing y el tensor de Riemann satisface:
 \begin{equation}
     R_{\alpha\beta\gamma\delta}=\dfrac{R}{N(N-1)}(g_{\alpha\gamma}g_{\beta\delta}-g_{\alpha\delta}g_{\beta\gamma})
 \end{equation}
 
+\begin{adjustwidth}{0pt}{-100pt}
 \textcolor{blue}{Demostración:}
 
 Usando la identidad
@@ -82,7 +92,7 @@ de donde obtenemos la expresión para el tensor de Riemann para un espacio \text
 
 Un ejemplo de estos espacio-tiempo es la métrica de FLRW(Friedmann, Lemaître, Robertson, Walker.)
 
-\section{Métrica FLRW}
+\section{Métrica FLRW}\label{part7.2}
 
 Se define como un espacio-tiempo homogéneo e isotrópico:
 \begin{equation}
@@ -244,13 +254,13 @@ Esto se traduce en que los diagramas de espacio-tiempo son de la forma:
 
 \subsubsection{Distancia angular}
 
-\section{Ecuaciones de Friedmann}
+\section{Ecuaciones de Friedmann}\label{part7.3}
 
-\section{Contenido de energía}
+\section{Contenido de energía}\label{part7.4}
 
-\section{Modelo $\Lambda$CDM}
+\section{Modelo $\texorpdfstring{\Lambda}{Lambda}$CDM}\label{part7.5}
 
-\section{Problemas 7}
+\section*{Problemas 7}
 \begin{enumerate}
     \item \textbf{Curvatura en FRW}
     \begin{enumerate}[label=(\alph*)]
@@ -346,4 +356,5 @@ Esto se traduce en que los diagramas de espacio-tiempo son de la forma:
         \item Resuelva numéricamente la ecuación diferencial para $Y$ considerando los casos donde $\lambda = 10^{10}$ (materia oscura) y $\lambda=10^{20}$ (materia bariónica) y realize un plot en escala log-log como función de $X$ para cada caso y determine el valor numérico de $Y_{\infty}$ integrando la ecuación diferencial para valores de $X$ muy grandes. ¿Cuál es la densidad de energía reliquia en cada caso?
     \end{enumerate}
 \end{enumerate}
+\end{adjustwidth}
 \end{document}

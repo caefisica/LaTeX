@@ -1,10 +1,22 @@
 \documentclass[../main]{subfiles}
 \begin{document}
-\section{Geometria Riemanniana}
+\section{Geometria Riemanniana}\label{part4.1}
+        \begin{margintable}\vspace{.8in}\footnotesize
+		\begin{tabularx}{\marginparwidth}{|X}
+		  Section~\ref{part4.1}. Geometría Riemanniana\\
+            Section~\ref{part4.2}. Visión general \\
+            Section~\ref{part4.3}. Derivada Covariante\\
+            Section~\ref{part4.4}. Transporte paralelo y Geodésicas\\
+            Section~\ref{part4.5}. Simetrías y vectores de Killing\\
+            Section~\ref{part4.6}. Curvatura de Riemann\\
+		\end{tabularx}
+	\end{margintable}
+
 Sobre una manifold de Riemann $(M,g)$, podemos introducir el concepto de curvatura de una manifold. En esta sección estudiaremos las bases de la geometria Riemanniana. La teoria de la Relatividad de Einstein ha sido construida en base a estos conceptos.
 
 Hasta ahora las manifolds que hemos considerado están definidas con las nociones de derivadas e integrales. Necesitamos introducir una metrica para definir el concepto de longitud.
 
+\begin{adjustwidth}{0pt}{-100pt}
 \definicion{(Métrica de Riemann)}. Una métrica de Riemann $g$ sobre una manifold suave $\mathcal{M}$ es una forma bilineal $g: T_p \mathcal{M}\times T_p \mathcal{M} \rightarrow \mathbb{R}$ para cualquier $p\in \mathcal{M}$ con las siguientes propiedades:
 \begin{enumerate}
     \item[$(i)$] Simétrico: $g(X_p, Y_p)=g(Y_p, X_p) \ \forall \ X_p, Y_p \in T_p\mathcal{M}$.
@@ -51,15 +63,15 @@ Para un mapa suave $f:\mathcal{M}\rightarrow \mathcal{N}$, la métrica $g$ sobre
     f^* g(X_p, Y_p)=g(f^* X_p, f^* Y_p)
 \end{equation}
 
-\section{Visión General}
+\section{Visión General}\label{part4.2}
 
-\section{Derivada Covariante}
+\section{Derivada Covariante}\label{part4.3}
 Consideremos 
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         \partial_{\lambda'}T^{\mu'}=\pdv{T^{\mu'}}{x^{\partial_{\lambda'}}}&=\pdv{x^{\sigma}}{x^{\lambda'}}\pdv{}{x^{\sigma}}\left(\pdv{x^{\mu'}}{x^{\nu}}T^{\nu}(x)\right)\\
         &=\pdv{x^{\sigma}}{x^{\lambda'}}\pdv{x^{\mu'}}{x^{\nu}}\partial_{\sigma} T^{\nu}+\underbrace{\left(\pdv{x^{\sigma}}{x^{\lambda'}}\pdv{^2 x^{\mu}}{x^{\sigma}\partial x^{\nu}}\right)}_{\text{no tensorial}} T^{\nu}
-    \end{split}
+    \end{aligned}
 \end{equation}
 
 Encontremos una nueva ``derivada covariante'', $\nabla_{\lambda}T^{\mu}$, que transforma como un tensor:
@@ -78,25 +90,25 @@ Sea $V$ un vector tangente a lo largo de una curva $\gamma$, la derivada covaria
 
 Sea $T=T^{\mu}e_{\mu}$ y $V=V^{\nu} e_{\nu}$. La derivada covariante de $T$ es 
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         \nabla_V T=\nabla_V (T^{\mu}e_{\mu})&=\nabla_V (T^{\mu})+T^{\mu}(\nabla_V e_{\mu})\\
         &=V(T^{\mu})e_{\mu}+T^{\mu}\nabla_{V^{\nu}e_{\nu}}e_{\mu}\\
         &=V^{\nu}e_{\nu}(T^{\mu})e_{\mu}+T^{\mu}V^{\nu}\nabla_{e_{\nu}}e_{\mu}\\
         &=V^{\nu}(\partial_{\nu}T^{\mu})e_{\mu}+T^{\mu}V^{\nu}\Gamma^{\lambda}_{\nu\mu}e_{\lambda}\\
         &=V^{\nu}(\partial_{\nu}T^{\mu}+\Gamma^{\mu}_{\nu\beta}T^{\beta})e_{\mu}
-    \end{split}
+    \end{aligned}
 \end{equation}
 
 Así las componentes resultantes de $(1, 1)$ tensor son $\nabla_{\nu} T^{\mu}=\partial_{\mu} T^{\mu}+\textcolor{red}{\Gamma^{\mu}_{\nu\lambda} T^{\lambda}}$ donde hemos definido $(\nabla T)^{\mu}_{\nu}:=\nabla_{\nu} T^{\mu}$.
 
 Ahora, bajo una transformación de coordenadas, tenemos:
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         \nabla_{\mu'}T^{\nu'}&=\partial_{\mu'}T^{\nu'}+\Gamma^{\nu'}_{\mu'\alpha'}T^{\alpha'}\\
         &=\pdv{x^{\mu}}{x^{\mu'}}\partial_{\mu}\left(\pdv{x^{\nu'}}{x^{\nu}}T^{\nu}\right)+\Gamma^{\nu'}_{\mu'\alpha'}\pdv{x^{\alpha'}}{x^{\alpha}} T^{\alpha} \\
         &=\pdv{x^{\mu}}{x^{\mu'}}\pdv{x^{\nu'}}{x^{\nu}} \partial_{\mu}T^{\nu}+\pdv{x^{\mu}}{x^{\mu'}}\pdv{x^{\nu'}}{x^{\mu}}{x^{\nu}} T^{\nu}+\Gamma^{\nu'}_{\mu'\alpha'}\pdv{x^{\alpha'}}{x^{\alpha}} T^{\alpha} \\
         &=\textcolor{blue}{\pdv{x^{\mu}}{x^{\mu'}}\pdv{x^{\nu'}}{x^{\nu}}\nabla_{\mu}T^{\nu}} \textcolor{red}{\underbrace{\left(\pdv{x^{\mu}}{x^{\mu'}}\pdv{x^{\nu'}}{x^{\nu}}\Gamma^{\nu}_{\mu\alpha}-\pdv{x^{\mu}}{x^{\mu'}}\pdv{x^{\nu'}}{x^{\mu}}{x^{\alpha}}-\Gamma^{\nu'}_{\mu'\alpha'}\pdv{x^{\alpha'}}{x^{\alpha}}\right)}_{0}T^{\alpha}}
-    \end{split}
+    \end{aligned}
 \end{equation}
 usando $\partial_{\mu}T^{\nu}=\partial_{\mu} T^{\nu}-\Gamma^{\nu}_{\mu\alpha}T^{\alpha}$.
 
@@ -115,10 +127,10 @@ Consideremos $f\equiv w_{\nu}T^{\nu}$ ya que $\nabla_{\mu}f=\partial_{\mu} f$, t
 \end{equation}
 o también
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         \nabla_{\mu}(w_{\nu}T^{\nu})&=(\nabla_{\mu}w_{\nu})T^{\nu}+w_{\nu}(\nabla_{\mu}T^{\nu})\\
         &=(\nabla_{\mu}w_{\nu})T^{\nu}+w_{\nu}(\partial_{\mu}T^{\nu}+\Gamma^{\nu}_{\mu\alpha}T^{\alpha})
-    \end{split}
+    \end{aligned}
 \end{equation}
 
 Comparando estas ecuaciones, obtenemos
@@ -138,10 +150,10 @@ hasta ahora no hemos usado el tensor métrico para definir $\nabla$.
 
 \definicion{(Conexión).} Sea $X$ y $Y$ campos vectoriales sobre $\mathcal{M}$. El símbolo $\nabla_{\alpha} Y$ denota la derivada del campo vectorial $Y$ a lo largo del flujo del campo vectorial $X$. De hecho, $\nabla$ es un mapa:
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         \nabla: &\mathfrak{X}(\mathcal{M}) \times \mathfrak{X}(\mathcal{M}) \rightarrow \mathfrak{X}(\mathcal{M})\\
         &(X, Y) \rightarrow \nabla_X Y
-    \end{split}
+    \end{aligned}
 \end{equation}
 el cual satisface las siguientes condiciones:
 \begin{enumerate}
@@ -182,13 +194,13 @@ Ecuaciones relativistas deben ser construidas con derivadas covariantes, no deri
 
 Ejemplo:
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         \partial_{\nu} F^{\mu\nu}=J^{\mu} \ &\rightarrow \ \nabla_{\mu}F^{\mu\nu}=J^{\mu}\\
         \partial_{\nu} T^{\mu\nu}=0 \ &\rightarrow \ \nabla_{\nu} T^{\mu\nu}=0
-    \end{split}
+    \end{aligned}
 \end{equation}
 
-\section{Transporte paralelo y Geodesicas}
+\section{Transporte paralelo y Geodesicas}\label{part4.4}
 
 Dada una conexión $\nabla$ sobre un bundle vectorial $E$, podemos definir direcciones \textcolor{red}{horizontal} en el espacio $\Gamma(E)$ de secciones. Una sección $s \in \Gamma(E)$ es \textcolor{red}{paralela} a lo largo de un camino $\gamma: I \rightarrow \mathcal{M}$:
 \begin{equation}
@@ -216,10 +228,10 @@ En espacio-tiempo plano, el \textcolor{red}{transporte paralelo} de un vector $v
 
 Así podemos generalizarlo a espacio-tiempo curvo, si $\partial \rightarrow \nabla$:
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         \dfrac{D v^{\mu}}{D\lambda}=\dv{x^{\mu}}{\lambda}\nabla_{\nu}v^{\mu}&=0 \quad (\text{espacio-tiempo curvo})\\
         \dv{v^{\mu}}{\lambda}+\Gamma^{\mu}_{\sigma\nu}\dv{x^{\sigma}}{\lambda}v^{\nu}&=0
-    \end{split}
+    \end{aligned}
 \end{equation}
 donde $\Gamma^{\mu}_{\sigma\nu}$ determina como las componentes de un vector cambian a lo largo de una curva.
 
@@ -230,7 +242,7 @@ Una \textcolor{red}{geodésica} es una curva a lo largo de la cual el vector tan
 
 La cual es igual a la \textcolor{red}{ecuación de la geodésica} si identificamos $\Gamma^{\mu}_{\sigma\nu}$ con las conexiones de Levi-Civita.
 
-\section{Simetrías y vectores de Killing}
+\section{Simetrías y vectores de Killing}\label{part4.5}
 
 Un campo vectorial $X$ sobre una manifold Riemanniana ($\mathcal{M}, g$) es llamado \textcolor{red}{campos vectoriales de Killing} si su flujo se convierte $\varphi^*_1 g=g$, osu derivada de la métrica $g$ se anula
 \begin{equation}
@@ -251,10 +263,10 @@ Usando el isomorfismo $T_p \mathcal{M} \cong T^*_p \mathcal{M}$, podemos introdu
 
 Consideremos $x^{\mu} \rightarrow \tilde{x}^{\mu}(x)$ como una transformación \textcolor{red}{activa} entre diferentes puntos en la manifold. Puntos vecinos estarán conectados por transformaciones infinitesimales
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         x^{\mu} \rightarrow \tilde{x}^{\mu}(x)&=x^{\mu}+\delta x^{\mu}\\
         &=x^{\mu}-v^{\mu}
-    \end{split}
+    \end{aligned}
 \end{equation} 
 
 \proposicion{} La métrica cambia como $\delta g_{\mu\nu}=\nabla_{\mu} v_{\nu}+\nabla_{\nu} v_{\mu}$.
@@ -270,10 +282,10 @@ donde
 
 Así, obtenemos 
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         \tilde{g}_{\mu\nu}(\tilde{x})&=\left(\delta^{\rho}_{\mu}+\partial_{\mu}v^{\rho}\right)\left(\delta^{\lambda}_{\nu}+\partial_{\nu}v^{\lambda}\right)g_{\rho\lambda}(x)\\
         &=g_{\mu\nu}(x)+\partial_{\mu}v^{\rho}g_{\rho\nu}(x)+\partial_{\nu}v^{\lambda}g_{\mu\lambda}(x)
-    \end{split}
+    \end{aligned}
 \end{equation}
 
 Escribiendo 
@@ -282,13 +294,13 @@ Escribiendo
 \end{equation}
 obtenemos:
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         \delta g_{\mu\nu}&=\tilde{g}_{\mu\nu}(\tilde{x})-g_{\mu\nu}(\tilde{x})\\
         &=v^{\lambda}\partial_{\lambda} g_{\mu\nu}+\partial_{\mu}v^{\rho}g_{\rho\nu}+\partial_{\nu}v^{\lambda}g_{\mu\lambda}\\
         &=v^{\lambda}\partial_{\lambda} g_{\mu\nu}+\partial_{\mu}(v^{\rho}g_{\rho\nu})+\partial_{\nu}(v^{\lambda}g_{\mu\lambda})-v^{\rho}\partial_{\mu} g_{\rho\nu}-v^{\lambda} \partial_{\nu}g_{\mu\lambda}\\
         &=\nabla_{\mu} v_{\nu}+\nabla_{\nu}v_{\mu}+\Gamma^{\alpha}_{\mu\nu}v_{\alpha}+\Gamma^{\alpha}_{\nu\mu}v_{\alpha}-v^{\lambda}(\partial_{\mu}g_{\nu\lambda}+\partial_{\nu}g_{\mu\lambda}-\partial_{\lambda}g_{\mu\nu})\\
         &=\nabla_{\mu} v_{\nu}+\nabla_{\nu}v_{\mu}. \quad \square 
-    \end{split}
+    \end{aligned}
 \end{equation}
 
 Para una \textcolor{red}{transformación de simetría}, tenemos $\delta g_{\mu\nu}=0 \ \rightarrow \ \nabla_{\mu} v_{\nu}+\nabla_{\nu} v_{\mu}=0$ (\textcolor{red}{ecuación de Killing}), donde $v^{\mu}$ es un \textcolor{red}{vector de Killing}. Encontrar todos los vectores de Killing de una métrica $g_{\mu\nu}$ puede ser difícil, algunas propiedades son:
@@ -352,10 +364,10 @@ Permutando coordenadas, obtenemos
 
 Proof: Consideremos la derivada direccional de $Q$:
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         \dfrac{D(K^{\nu}P_{\nu})}{D\lambda}&= P^{\mu}\nabla_{\mu}(K^{\nu}P_{\nu})=P^{\mu}P^{\nu}\nabla_{\mu}K_{\nu}+(P^{\mu}\nabla_{\mu}P^{\nu})K_{\nu}\\
         &=\dfrac{1}{2}P^{\mu}P^{\nu}(\nabla_{\mu}K_{\nu}+\nabla_{\nu}K_{\mu})=0. \quad \square
-    \end{split}
+    \end{aligned}
 \end{equation}
 
 \ejemplo{}
@@ -371,7 +383,7 @@ Sea $(u, \{x^{i}\})$ coordenadas locales sobre $\mathcal{M}$. Ya que $\nabla_{\p
 \end{equation}
 donde $\Gamma^{i}_{jk}$ son llamados los \textcolor{red}{Simbolos de Christoffel}. Si escribimos el campo vectorial $X=x^{i}\pdv{}{x^{i}}$, $Y=y^{i}\pdv{}{x^{i}}$ en términos de estas bases, entonces la derivada covariante es expresada como 
 \begin{equation}
-    \nabla_x Y=X^{i}\left(\pdv{Y^k}{x^{i}}+\Gamma^{\alpha}_{\ij} Y^j\right)\pdv{}{x^k}
+    \nabla_x Y=X^{i}\left(\pdv{Y^k}{x^{i}}+\Gamma^{\alpha}_{ij} Y^j\right)\pdv{}{x^k}
 \end{equation}
 
 Sea $\gamma: I \rightarrow \mathcal{M}$ una curva sobre $\mathcal{M}$ y definimos:
@@ -407,9 +419,8 @@ Los símbolos de Christoffel $\Gamma^k_{ij}$, el camino $\gamma$, y las derivada
 
 Ya que esto es un conjunto de ecuaciones diferenciales, existe así una única solución $x(t)$ dada las condiciones iniciales $x(0) \in T_{\gamma(0)}\mathcal{M}$. El vector $x(t)$ es obtenido de $x(0)$ por \textcolor{red}{transporte paralelo} a lo largo de la curva $\gamma$:
 
+Consideremos un paralelogramo infinitesimal \\
 \begin{minipage}{0.5\textwidth}
-    Consideremos un paralelogramo infinitesimal 
-    \\
     \begin{center}
         \includegraphics[scale=0.4]{img/imgRG4.2.PNG}
     \end{center}
@@ -422,10 +433,10 @@ Ya que esto es un conjunto de ecuaciones diferenciales, existe así una única s
 
 El cambio del vector a lo largo de un lado $\delta x^{\rho}$ es:
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         \delta V^{\mu}&=\dv{V^{\mu}}{\lambda}\delta \lambda = -\Gamma^{\mu}_{\nu\rho} V^{\nu} \dv{x^{\rho}}{\lambda} \delta \lambda \quad \text{usando} \quad \dfrac{\mathrm{D}V^{\mu}}{\mathrm{D}\lambda}=\dv{V^{\mu}}{\lambda}+\Gamma^{\mu}_{\nu\rho}V^{\nu}\dv{x^{\rho}}{\lambda}\delta\lambda=0\\
         &=-\Gamma^{\mu}_{\nu\rho}V^{\nu}\delta x^{\rho}.
-    \end{split}
+    \end{aligned}
 \end{equation}
 
 El transporte paralelo a lo largo de dos caminos da:
@@ -436,11 +447,11 @@ El transporte paralelo a lo largo de dos caminos da:
 
 La diferencia es 
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         \delta V^{\mu} &= \delta V^{\mu}_{(1)}-\delta V^{\mu}_{(2)}\\
         &=\partial_{\sigma}\left(\Gamma^{\mu}_{\nu\rho}V^{\nu}\right)B^{\sigma}A^{\rho}-\partial_{\sigma}(\Gamma^{\mu}_{\nu\rho}V^{\nu})A^{\sigma}B^{\rho}+\cdots \\
         &=\left(\partial_{\sigma}\Gamma^{\mu}_{\nu\rho}V^{\nu}+\Gamma^{\mu}_{\nu\rho}\partial_{\sigma}V^{\nu}-\partial_{\rho}\Gamma^{\mu}_{\nu\sigma}V^{\nu}-\Gamma^{\mu}_{\nu\sigma}\partial_{\rho}V^{\nu}\right)A^{\rho}B^{\sigma}
-    \end{split}
+    \end{aligned}
 \end{equation}
 
 Usando $\partial_{\sigma}V^{\nu}=-\Gamma^{\nu}_{\sigma\lambda}V^{\lambda}$ tenemos:
@@ -455,13 +466,13 @@ Donde definimos el \textcolor{red}{tensor de Riemann} como:
 
 Por otra parte, consideremos:
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         [\nabla_{\mu}, \nabla_{\nu}]V^{\rho}&=\nabla_{\mu}\nabla_{\nu} V^{\rho}-\nabla_{\nu}\nabla_{\mu}V^{\rho}\\
         &=\partial_{\mu}(\nabla_{\nu}V^{\rho})-\Gamma^{\lambda}_{\mu\nu}\nabla_{\lambda}V^{\rho}+\Gamma^{\rho}_{\mu\sigma}\nabla_{\nu}V^{\sigma}-(\mu \leftrightarrow \nu)\\
         &=\partial_{\mu}\partial_{\nu}V^{\rho}+(\partial_{\mu}\Gamma^{\rho}_{\nu\sigma})V^{\sigma}+\Gamma^{\rho}_{\nu\sigma}\partial_{\mu}V^{\sigma}-\Gamma^{\lambda}_{\mu\nu}\partial_{\lambda}V^{\rho}-\Gamma^{\lambda}_{\mu\nu}\Gamma^{\rho}_{\lambda\sigma}V^{\sigma}\\
         &\quad +\Gamma^{\rho}_{\mu\sigma}\partial_{\nu}V^{\sigma}+\Gamma^{\rho}_{\mu\sigma}\Gamma^{\sigma}_{\nu\lambda}V^{\lambda}-(\mu \leftrightarrow \nu)\\
         &=(\partial_{\mu}\Gamma^{\rho}_{\nu\sigma}-\partial_{\nu}\Gamma^{\rho}_{\mu\sigma}+\Gamma^{\rho}_{\mu\lambda}\Gamma^{\lambda}_{\nu\sigma}-\gamma^{\rho}_{\nu\lambda}\Gamma^{\lambda}_{\mu\sigma})V^{\sigma}-2\Gamma^{\lambda}_{\mu\nu}\nabla_{\lambda}V^{\rho}
-    \end{split}
+    \end{aligned}
 \end{equation}
 
 Así, encontramos que:
@@ -484,9 +495,9 @@ que se conoce como la identidad de Ricci.
     R(x, y)z=\nabla_x \nabla_y z-\nabla_y \nabla_x z-\nabla_{(x, y)}z.
 \end{equation}
 
-\section{Curvatura de Riemann}
+\section{Curvatura de Riemann}\label{part4.6}
 
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}{0.65\textwidth}
     Podemos considerar hacer un transporte paralelo sobre $S^n$ a lo largo del camino cerrado en contra de las agujas del reloj. 
     
     Podemos ver que luego de transportar paralelamente un vector a traves de un camino cerrado, obtenemos un vector diferente al inicial. La curvatura de Riemann es definida para medir esta diferencia. 
@@ -497,9 +508,11 @@ que se conoce como la identidad de Ricci.
     \end{equation}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
+\begin{adjustwidth}{10pt}{-80pt}
     \begin{center}
         \includegraphics[scale=0.42]{img/imgRG4.4.PNG}
     \end{center}
+\end{adjustwidth}
 \end{minipage}
 
 Sea $(\mathcal{M}, g)$ una manifold de Riemann y $\nabla$ la conexión de Levi-Civita. La correspondiente curvatura es llamada el \textcolor{red}{tensor de curvatura de Riemann}, y asuimos que la curvatura es siempre el tensor de curvatura de Riemann, si introducimos la siguiente notación:
@@ -546,5 +559,5 @@ Si existe una constante $\Lambda$ tal que $R_{ij}=\Lambda g_{ij}$, entonces $(\m
 \begin{equation}
     R=R^{\mu}_{\mu}=g^{\mu\nu}R_{\mu\nu}.
 \end{equation}
-
+\end{adjustwidth}
 \end{document}

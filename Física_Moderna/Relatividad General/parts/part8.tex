@@ -1,12 +1,22 @@
 \documentclass[../main]{subfiles}
 \begin{document}
-    \section{Gravedad Linealizada}
+\section{Gravedad Linealizada}\label{part8.1}
+        \begin{margintable}\vspace{.8in}\footnotesize
+		\begin{tabularx}{\marginparwidth}{|X}
+		  Section~\ref{part8.1}. Gravedad Linealizada\\
+            Section~\ref{part8.2}. Soluciones a la ecuación de onda\\
+            Section~\ref{part8.3}. Producción de Ondas Gravitacionales\\
+            Section~\ref{part8.4}. Energía radiada\\
+            Section~\ref{part8.5}. Flujo de energía\\
+		\end{tabularx}
+	\end{margintable}
 
 La expresión a primer orden sobre una métrica plana se escribe como:
 \begin{equation}
     g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu} \quad \text{con} \quad ||h_{\mu\nu}|| << 1,
 \end{equation}
 donde $h_{\mu\nu}$ es la perturbación sobre $\eta_{\mu\nu}$, la inversa de $g_{\mu\nu}$, viene dada por:
+\begin{adjustwidth}{0pt}{-100pt}
 \begin{equation}
     \begin{split}
         g^{\mu\nu}&=\eta^{\mu\nu}-h^{\mu\nu} \\
@@ -111,7 +121,7 @@ El elemento de línea en este límite:
 \end{equation}
 coincide con el caso de gravedad Newtoniana.
 
-\section{Soluciones a la ecuación de onda}
+\section{Soluciones a la ecuación de onda}\label{part8.2}
 
 Para la ecuación en el vacío:
 \begin{equation}
@@ -235,10 +245,12 @@ Para $t=0$ sí las geodésicas con separación $B^{\mu}$ satisfacen sí en $t=0$
 entonces como $B^1$ y $B^2$ son separables en la ecuación de la desviación geodésica, el modo $h_+$ corresponde a oscilaciones en estas geodésicas de la forma:
 
 \begin{figure}[h]
+    \begin{adjustwidth}{0pt}{-100pt}
     \centering
     \includegraphics[width=.8\textwidth]{img/imgRG8.1.PNG}
     \label{fig8.1}
     \caption{Oscilación para $h_x$ al pasar una onda gravitacional. (Sean Carroll)}
+    \end{adjustwidth}
 \end{figure}
 
 Adicionalmente, como en electromagnetismo, es posible definir \textcolor{red}{polarización circular} \textcolor{blue}{derecha} o \textcolor{blue}{izquierda} usando 
@@ -247,7 +259,7 @@ Adicionalmente, como en electromagnetismo, es posible definir \textcolor{red}{po
     h_L&=\dfrac{1}{\sqrt{2}}(h_+ -ih_x)
 \end{align}
 
-\section{Producción de Ondas Gravitacionales}
+\section{Producción de Ondas Gravitacionales}\label{part8.3}
 
 Para estudiar la producción de ondas gravitacionales consideramos la ecuación no-homogénea de $h_{\mu\nu}$ 
 \begin{equation}
@@ -267,10 +279,12 @@ donde $\Sigma$ es la región donde $T_{\mu\nu}$ está definido, $t_r$ es el tiem
     t_r=t-|\vec{x}-\vec{y}|
 \end{equation}
 \begin{figure}[h]
+    \begin{adjustwidth}{0pt}{-100pt}
     \centering
     \includegraphics[width=.7\textwidth]{img/imgRG8.2.PNG}
     \label{fig8.2}
     \caption{Geometría para el cono de luz en el pasado de $P$. (Michele Maggiore)}
+    \end{adjustwidth}
 \end{figure}
 
 La función de Green para el problema homogéneo viene dada por 
@@ -309,11 +323,11 @@ Escribiendo $T_{ij}$ en términos de derivadas:
 \end{equation}
 
 
-\section{Energía Radiada}
+\section{Energía Radiada}\label{part8.4}
 
-\section{Flujo de energía}
+\section{Flujo de energía}\label{part8.5}
 
-\section{Problemas 8}
+\section*{Problemas 8}
 \begin{enumerate}
     \item \textbf{Parámetros en Inflación}
     
@@ -442,4 +456,5 @@ Escribiendo $T_{ij}$ en términos de derivadas:
         J^{i}=\dfrac{c^2}{32\pi G}\int \mathrm{d}^3 x\left[-\epsilon^{ikl}h^{\mathrm{TT}}_{ab}x^k \partial^{l}h^{\mathrm{TT}}_{ab}+2\epsilon^{ikl}h^{\mathrm{TT}}_{ak}\dot{h}^{\mathrm{TT}}_{al}\right].
     \end{equation}
 \end{enumerate}
+\end{adjustwidth}
 \end{document}

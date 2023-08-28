@@ -16,6 +16,7 @@ La noción de TOP. provee conjuntos abiertos y cercados que permiten definir con
 
 \definicion{(Topologia y espacios topológicos - TOP.) Sea $X$ un conjunto y $\mathcal{T}$ una colección de subconjuntos de $X$ que satisfacen las siguientes propiedades} 
 
+\begin{adjustwidth}{0pt}{-100pt}
 \begin{enumerate}
     \item $\emptyset$ y $X$ estan en $\mathcal{T}$
     \item Para una subcolección $\{ u_i \in X \ \backslash \ i \in I\}$, $\bigcup_i u_i \in \mathcal{T}$
@@ -58,40 +59,46 @@ En términos generales, dos puntos se pueden ``separar'' en el espacio de Haussd
 \textcolor{red}{Recordatorio:} Una función mapea elementos de su dominio a elementos en su codominio. Dada una función $f: X\rightarrow Y$:
 \begin{itemize}
     \item 
-    \begin{minipage}{0.5\textwidth}
+    \begin{minipage}{0.7\textwidth}
         La función es \textcolor{red}{inyectiva}(uno-a-uno) si cada elemento del codominio se asigna como máxima a un elemetno del dominio, o de manera equivalente, si elementos distintos del dominio se asignan a elementos distintos en el codominio.
         \begin{equation}
             \forall \ x,x' \in X, f(x)=f'(x) \Rightarrow x=x'
         \end{equation}    
     \end{minipage}
     \begin{minipage}{0.5\textwidth}
+    \begin{adjustwidth}{0pt}{0pt}
         \begin{center}
             \includegraphics[scale=0.4]{img/inyectiva.PNG}
         \end{center}
+    \end{adjustwidth}
     \end{minipage}
     \item 
-    \begin{minipage}{0.5\textwidth}
+    \begin{minipage}{0.7\textwidth}
         La función es \textcolor{red}{sobreyectiva}, o sobre, si cada elemento del codominio está mapeado por al menos un elemento del dominio. Es decir, la imagen y el codominio de la función son iguales.
         \begin{equation}
             \forall \ y \in Y, \exists \ x \in X \ \text{tal que} \ y=f(x)
         \end{equation}   
     \end{minipage}
     \begin{minipage}{0.5\textwidth}
+    \begin{adjustwidth}{0pt}{0pt}
         \begin{center}
             \includegraphics[scale=0.37]{img/sobreyectiva.PNG}
         \end{center}
+    \end{adjustwidth}
     \end{minipage}
     \item 
-    \begin{minipage}{0.5\textwidth}
+    \begin{minipage}{0.7\textwidth}
         La función es \textcolor{red}{biyectiva}(uno a uno y sobre) si cada elemento del codominio está mapeado por exactamente un elemento del dominio. Es decir, la función es tanto inyectiva como sobreyectiva.
         \begin{equation}
             \forall \ y\in Y, \exists ! \ x\in X \ \text{tal que} \ y=f(x)
         \end{equation}  
     \end{minipage}
     \begin{minipage}{0.5\textwidth}
+    \begin{adjustwidth}{0pt}{0pt}
         \begin{center}
             \includegraphics[scale=0.37]{img/biyectiva.PNG}
         \end{center}
+    \end{adjustwidth}
     \end{minipage}
 \end{itemize}
 \section{Manifolds}\label{part1.2}
@@ -426,6 +433,7 @@ La cual posee estructura de una manifold. Llamamos $T^{*}\mathcal{M}$ el \textco
 \hrule
 
 \begin{minipage}[t]{0.5\textwidth}
+\begin{adjustwidth}{0pt}{20pt}
     \centerline{\textcolor{red}{Bundle tangente}}
     \begin{equation*}
         TM=\bigcup_p T_p \mathcal{M}
@@ -449,11 +457,13 @@ La cual posee estructura de una manifold. Llamamos $T^{*}\mathcal{M}$ el \textco
     \begin{equation*}
         X_p=\sum_{i=1}^n \alpha^{i}\pdv{}{x^{i}}\Big{|}_p
     \end{equation*}
+\end{adjustwidth}
 \end{minipage}
     \hspace{0.01\textwidth} % Espacio entre las dos minipages
     \vrule % Línea vertical
     \hspace{0.01\textwidth} % Espacio entre las dos minipages
 \begin{minipage}[t]{0.5\textwidth}
+\begin{adjustwidth}{20pt}{0pt}
     \centerline{\textcolor{red}{Bundle cotangente}}
     \begin{equation*}
         T^{*}\mathcal{M}=\bigcup_p T^{*}_p \mathcal{M}
@@ -477,6 +487,7 @@ La cual posee estructura de una manifold. Llamamos $T^{*}\mathcal{M}$ el \textco
     \begin{equation*}
         w_p=\sum_{i=1}^n \beta_1 \mathrm{d}x^{i}\Big{|}_p
     \end{equation*}
+\end{adjustwidth}
 \end{minipage}
 
 Tal que:
@@ -1021,4 +1032,5 @@ Podemos mostrar que esto es independiente de la elección de un recubrimiento ab
         Calcule la métrica inducida sobre el espacio deSitter.
     \end{enumerate}
 \end{enumerate}
+\end{adjustwidth}
 \end{document}

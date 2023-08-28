@@ -1,6 +1,17 @@
 \documentclass[../main]{subfiles}
 \begin{document}
-\section{El problema de la Gravedad Newtoniana}
+\section{El problema de la Gravedad Newtoniana}\label{part2.1}
+        \begin{margintable}\vspace{.8in}\footnotesize
+		\begin{tabularx}{\marginparwidth}{|X}
+		  Section~\ref{part2.1}. Gravedad Newtoniana\\
+            Section~\ref{part2.2}. Principio de Equivalencia \\
+            Section~\ref{part2.3}. Relatividad Especial\\
+            Section~\ref{part2.4}. Transformaciones de Lorentz\\
+            Section~\ref{part2.5}. Diagramas de Espacio-tiempo\\
+            Section~\ref{part2.6}. Cinemática y dinámica relativista\\
+		\end{tabularx}
+	\end{margintable}
+ 
 En mecánica clásica el potencial gravitacional de una distribución de materia $\rho(\vec{x}, t)$ viene dada por la ecuación de Poisson:
 \begin{equation}
     \nabla^2 \Phi(\vec{x}, t)=-4\pi G\rho(\vec{x}, t) \ \rightarrow \ \Phi(\vec{x}, t)=-G \int \mathrm{d}^3 x' \dfrac{\rho(\vec{x}, t)}{|\vec{x}-\vec{x}'|}
@@ -10,20 +21,21 @@ Sin embargo $\Phi(\vec{x}, t)$ no puede cambiar instantaneamente por cambios en 
 \begin{equation}
     \nabla^2 \Phi=-\dfrac{\rho(\vec{x}, t)}{\epsilon_0} \ \rightarrow \ \Phi(\vec{x}, t)=\dfrac{1}{4\pi \epsilon_0}\int \mathrm{d}^3 x' \dfrac{\rho(\vec{x}, t)}{|\vec{x}-\vec{x}'|}
 \end{equation}
+\begin{adjustwidth}{0pt}{-100pt}
 la solución: \textcolor{blue}{Encontrar las ecuaciones covariantes que sean consistentes con diferentes observadores.}
 
 \textcolor{red}{Hint: Ecuaciones de Maxwell}
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         \partial_{\mu} F^{\mu\nu}&=J^{\nu} \\
         \partial_{\mu}{}^{*} F^{\mu\nu}&=0
-    \end{split}
+    \end{aligned}
     \left\{
-    \begin{split}
+    \begin{aligned}
         A^{\mu}&=(\phi, \vec{A})\\
         J^{\mu}&=(\rho, \vec{J})\\
         F_{\mu\nu}&=\partial_{\mu} A_{\nu}-\partial_{\nu}A_{\mu}
-    \end{split}
+    \end{aligned}
     \right.
 \end{equation}
 Donde ${}^* F_{\mu\nu}$ es el dual de $F_{\mu\nu}$.\footnote{$*f_{\mu\nu}=\dfrac{1}{2}\epsilon_{\mu\nu}^{\lambda \theta}F_{\lambda\theta}$.} 
@@ -32,7 +44,7 @@ Estas ecuaciones son invariantes bajo transformaciones de Lorentz(y cambiando $\
 
 \textcolor{red}{La Relatividad General plantea ecuaciones covariantes bajo difeomorfismos para la gravedad.}
 
-\section{Principio de Equivalencia}
+\section{Principio de Equivalencia}\label{part2.2}
 Existen tres formas del principio de equivalencia en Relatividad General:
 
 \definicion{ \textcolor{red}{Principio de equivalencia débil}(Galileano)}
@@ -62,7 +74,7 @@ Existen tres formas del principio de equivalencia en Relatividad General:
     \item $G$ es una constante en el tiempo.
 \end{itemize}
 
-\section{Relatividad Especial}
+\section{Relatividad Especial}\label{part2.3}
 \definicion{\textcolor{red}{Postulados de la Relatividad especial}}
 \begin{enumerate}
     \item Las leyes de la naturaleza son las mismas en todos los sistemas inerciales.
@@ -85,7 +97,7 @@ Esta métrica $\eta_{\mu\nu}$(llamada de Minkowski para signatura pseudoriemanni
 \end{equation}
 Las transformaciones más generales que dejan invariante $\mathrm{d}\tau$, vienen dadas por el grupo $O(1, 3)$.
 
-\section{Transformaciones de Lorentz}
+\section{Transformaciones de Lorentz}\label{part2.4}
 Como vimos anteriormente, en general, $\mathrm{d}\tau^2$ es invariante bajo $O(1, 3)$, \textcolor{blue}{el grupo de Lorentz}\footnote{En general el grupo de Lorentz puede ser homogeneo si solo se incluye $\Lambda^{\mu}_\nu$ al transformar $x^{\mu}$ o inhomogeneo $x^{\mu} \rightarrow x^{'\mu}=\Lambda^{\mu}_{\nu}x^{\nu}+a^{\mu}$, esto se conoce como grupo de Poincare.}, donde podemos derivar las transformaciones de Lorentz $\Lambda^{\mu}_{\nu}$. Para las coordenadas $x^{\mu}$ tenemos que:
 \begin{equation}
     x^{\mu} \rightarrow x^{'\mu}=\Lambda^{\mu}_{\nu} x^{\nu}
@@ -114,7 +126,8 @@ De donde la condición $\Lambda \eta \eta^{-1}=\eta$, se tiene que
 \end{equation}
 y $(\det \Lambda)^2=1$, de donde se sigue que las transformaciones de Lorentz puede dividirse en cuatro componentes:
 
-\begin{table}[h]
+\begin{table}[H]
+    \begin{adjustwidth}{0pt}{-100pt}
     \begin{center}
         \begin{tabular}{|c|c|c|c|}
             \hline
@@ -125,6 +138,7 @@ y $(\det \Lambda)^2=1$, de donde se sigue que las transformaciones de Lorentz pu
             Impropia Asincróna & $-1$ & $< 0$ & $L^{\downarrow}_{-}$ \\ \hline
         \end{tabular}    
     \end{center}
+    \end{adjustwidth}
 \end{table}
 
 Donde bajo paridad $\mathbb{P} (\vec{x}\rightarrow -\vec{x})$ e inversión temporal $(t\rightarrow -t)$ podemos mapear una transformación de Lorentz propia Ortocróna(que preserva la dirección del tiempo):
@@ -146,10 +160,10 @@ donde $(M_{\alpha\beta})^{\mu}_{\nu}=i(\delta^{\mu}_{\alpha}g_{\beta\nu}-\delta^
 
 Si definimos $J_K=\dfrac{1}{2}\epsilon_{klm}M^{lm}$, podemos probar que usando el algebra de Lie de $SO(3, 1)$ tenemos que $J_K$ son los generadores de $SO(3)$.
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         [M_{\mu\nu}, M_{\rho\theta}]&=ig_{\nu\rho}M_{\mu\theta}-ig_{\mu\rho}M_{\nu\theta}-ig_{\nu\theta}M_{\mu\rho}+ig_{\mu\theta}M_{\nu\rho}\\
         [J_K, J_l]&=i\epsilon_{klm} J_m,\quad k,l,m=1, 2, 3
-    \end{split}
+    \end{aligned}
 \end{equation}
 
 Donde $K_i$ son los generadores de Boost\footnote{Es posible mostrar que usando generadores de Boost $K_i$ es posible obtener una rotación: $[K_l, K_m]=-i\epsilon_{lmn}J_n$.}, por lo tanto las transformaciones de Lorentz $L^{\uparrow}_{+}$ pueden escribirse como: 
@@ -158,23 +172,23 @@ Donde $K_i$ son los generadores de Boost\footnote{Es posible mostrar que usando 
 \end{equation}
 por ejemplo un boost en la dirección $x$, nos lleva a la transformación:
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         t'&=t\cosh w-x\sinh w\\
         x'&=-t\sinh w+x\cosh w
-    \end{split}
+    \end{aligned}
 \end{equation}
 si $w=\tanh^{-1}(v)$ recuperamos:
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         t'&=\gamma(t-vx)\\
         x'&=\gamma(x-vt)
-    \end{split}
+    \end{aligned}
 \end{equation}
 con $\gamma=\dfrac{1}{\sqrt{1-v^2}}$.
 
 Esto trae consecuencias como la dilatación del tiempo, la contracción de la longitud, etc.
 
-\section{Diagramas de Espacio-tiempo}
+\section{Diagramas de Espacio-tiempo}\label{part2.5}
 Se utilizan para representar una porción del espacio de Minkowski representando puntos del espacio-tiempo con longitud negativa\textcolor{red}{(space-like)}, nula\textcolor{red}{(null)} y positiva\textcolor{red}{(time-like)}.
 
 \definicion{\textcolor{red}{Tiempo propio}.} Mide el tiempo transcurrido por un observador que se mueve en una trayectoria recta(Minkowski) entre los eventos. Debido a que las partículas siguen trayectorias de tipo space-like se define 
@@ -224,19 +238,19 @@ Donde $\Lambda_{\alpha'}^{\beta}$ es la \textcolor{red}{transformación inversa}
 \begin{equation}
     \Lambda_{\alpha'}^{\beta} \Lambda^{\alpha'}_{\gamma}=\delta^{\beta}_{\gamma} 
     \left\{
-    \begin{split}
+    \begin{aligned}
         +1, & \quad \beta = \gamma \\
         0,  & \quad \beta \neq \gamma
-    \end{split}
+    \end{aligned}
     \right.
 \end{equation}
 
 Se sigue que el producto de un vector contravariante con un covariante es invariante de Lorentz 
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         U_{\alpha'}V^{\alpha'}&=\Lambda_{\alpha'}^{\beta} U_{\beta} \Lambda^{\alpha'}_{\gamma} V^{\gamma}=\left(\Lambda^{\beta}_{\alpha'} \Lambda^{\alpha'}_{\gamma}\right)U_{\beta} V^{\gamma} \\
         \left(\Lambda^{\beta}_{\alpha'} \Lambda^{\alpha'}_{\gamma}\right)U_{\beta} V^{\gamma}&=\delta^{\beta}_{\gamma} U_{\beta} V^{\gamma}=U_{\beta} V^{\beta}
-    \end{split}
+    \end{aligned}
 \end{equation} 
 
 Nótese que el producto anterior puede ser escrito como 
@@ -267,20 +281,20 @@ Siguiendo estas reglas es facil ver que operadores como divergencia $\vec{\nabla
 
 De forma analoga, un tensor transforma de forma analoga a los vectores o covectores, para un tensor de tipo $(m, n)$ transformara con $m$ transformaciones de Lorentz para cada índice y $n$ transformaciones inversas por cada dual base usado en el tensor.
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         T^{\mu'_1 \mu'_2 \cdots \mu'_m}_{\nu'_1 \nu'_2 \cdots \nu'_n}=\overbrace{\left(\Lambda^{\mu'_1}_{\mu_1} \Lambda^{\mu'_2}_{\mu_2}\cdots \Lambda^{\mu'_m}_{\mu_m}\right)}^{m \ \text{veces}} \underbrace{\left(\Lambda^{\nu_1}_{\nu'_1}\Lambda^{\nu_2}_{\nu'_2}\cdots \Lambda^{\nu_n}_{\nu'_n}\right)}_{n \ \text{veces}} T^{\mu_1\mu_2 \cdots \mu_m}_{\nu_1\nu_2\cdots \nu_n}
-    \end{split}
+    \end{aligned}
 \end{equation}
 
 Sin embargo, para un tensor como el de Levi-civita
 \begin{equation}
     \epsilon^{\alpha\beta\gamma\delta}=
     \left\{
-    \begin{split}
+    \begin{aligned}
         +1 &\quad \text{Permutaciones pares}\\
         -1 &\quad \text{Permutaciones impares}\\
         0  &\quad \alpha=\beta=\gamma=\delta
-    \end{split}
+    \end{aligned}
     \right.
 \end{equation}
 Se tiene que:
@@ -289,7 +303,7 @@ Se tiene que:
 \end{equation}
 para transformaciones propias de Lorentz $\det \Lambda=+1$.
 
-\section{Cinemática y dinámica relativista}
+\section{Cinemática y dinámica relativista}\label{part2.6}
 \definicion{\textcolor{red}{Cuadrivelocidad:}} Se define como el vector tangente a la línea de mundo de la partícula:
 \begin{equation}
     U^{\mu}=\dv{x^{\mu}}{\lambda}
@@ -314,17 +328,17 @@ luego $P^{\mu}$:
 \end{equation}
 vemos que la componente $P^0$ es igual a la energía de la partícula. ($c=1$)
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         E&=m\gamma \quad \text{con} \quad \gamma=\dfrac{1}{\sqrt{1-\beta^2}} \\
         \vec{P}&=m\gamma \vec{v}
-    \end{split}
+    \end{aligned}
 \end{equation}
 En el límite de $V\rightarrow 0$, las expresiones se reducen a las definiciones de energía y momento lineal clásicos 
 \begin{equation}
-    \begin{split}
+    \begin{aligned}
         E&=m+\dfrac{1}{2}mv^2+\Theta(v^3) \\
         \vec{P}&=m\vec{v}+\Theta(\vec{v}^3)
-    \end{split}
+    \end{aligned}
 \end{equation}
 
 \definicion{\textcolor{red}{Fuerza Relativista:}} De la definición de $P^{\mu}$ podemos encontrar la fuerza relativista:
@@ -412,10 +426,10 @@ En el límite de $V\rightarrow 0$, las expresiones se reducen a las definiciones
     \begin{equation}
         \eta(e_{\mu}, e_{\nu})\equiv \eta_{\mu\nu}=
         \left\{
-        \begin{split}
+        \begin{aligned}
             -1 &\quad \text{para} \ \mu=\nu=0\\
             +1 &\quad \text{para} \ \mu=\nu=1, 2, 3
-        \end{split}
+        \end{aligned}
         \right.
     \end{equation}
     para la base ortonormal estándar $\{e_0, e_1, e_2, e_3\}$ en $\mathbb{R}^4$. Linealidad implica que 
@@ -439,4 +453,5 @@ En el límite de $V\rightarrow 0$, las expresiones se reducen a las definiciones
         \item Muestre que el subconjunto $SO^+(1, 3)=\{\Lambda \in O(1, 3)| \det \Lambda =1, \Lambda^0_0\geq 1\}$ forma un subgrupo de $O(1, 3)$ llamado el grupo de Lorentz ortocrono propio.
     \end{enumerate}
 \end{enumerate}
+\end{adjustwidth}
 \end{document}

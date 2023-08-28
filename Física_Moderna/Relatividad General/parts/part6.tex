@@ -1,20 +1,34 @@
 \documentclass[../main]{subfiles}
 \begin{document}
+        \begin{margintable}\vspace{1.3in}\footnotesize
+		\begin{tabularx}{\marginparwidth}{|X}
+		  Section~\ref{part6.1}. Agujero negro de Schwarzschild\\
+            Section~\ref{part6.2}. Campos escalares en geometría de Schwarzschild\\
+            Section~\ref{part6.3}. Diagramas de Penrose\\
+            Section~\ref{part6.4}. Agujeros negros cargados\\
+            Section~\ref{part6.5}. Agujeros negros rotantes\\
+            Section~\ref{part6.6}. Agujeros negros reales\\
+            Section~\ref{part6.7}. Teoremas para agujeros negros\\
+            Section~\ref{part6.8}. Procesos en agujeros negros\\
+		\end{tabularx}
+	\end{margintable}
+
     Una de las predicciones más importantes de la Relatividad General son los Agujeros negros(BH) los cuales son regiones del espacio-tiempo donde ni la luz puede escapar.\footnote{Nos referimos a observadores distantes.}
-\begin{figure}[h]
+\begin{figure}[H]
     \begin{center}
         \includegraphics[scale=0.4]{img/imgRG6.1.PNG}
         \caption{Agujero negro en M87.}
     \end{center}
 \end{figure}
 
+\begin{adjustwidth}{0pt}{-100pt}
 \subsection*{Características}
 \textbf{Escala:} Objetos masivos de orden de varias a millones de masas solares $3-10 M_{\odot}$. (Estelares a supermasivos)\\
 \textbf{Origen:} Colapso gravitacional de una estrella, cuando se supera el límite de Tolman-Oppenheimer-Volkoft.\\
 \textbf{Matemática:} Satisfacen las ecuaciones de Einstein y son buenos ejemplos de espacio-tiempos curvados donde la escala de masa hace que $GM/c^2>>1$.\\
 \textbf{Características:} BH astrofísicos vienen caracterizados por su masa $M$, espin $J$ y carga $Q$.
 
-\section{Agujero negro de Schwarzschild}
+\section{Agujero negro de Schwarzschild}\label{part6.1}
 La métrica para un espacio-tiempo curvado por un objeto de masa $M$, estático y sin carga viene dado por:
 \begin{equation}
     \mathrm{d}s^2=-\left(1-\dfrac{2GM}{r}\right)\mathrm{d}t^2+\left(1-\dfrac{2GM}{r}\right)^{-1}\mathrm{d}r^2+r^2(\mathrm{d}\theta^2+\sin^2 \theta\mathrm{d}\varphi)
@@ -37,10 +51,12 @@ El límite de masa para formar un agujero egro astrofísico viene dado por:
     M>4M_{\odot} \rightarrow \ \text{Límite de Tolman-Oppenheimer-Volkoff}
 \end{equation}
 
-\begin{figure}[h]
+\begin{figure}[H]
+    \begin{adjustwidth}{0pt}{-100pt}
     \centering
     \includegraphics[scale=0.5]{img/imgRG6.2.PNG}
     \caption{Conos de luz cerrándose para un observador distante.}
+    \end{adjustwidth}
 \end{figure}
 
 Los conos de luz satisfacen:
@@ -65,11 +81,13 @@ Se introduce remapeando $r=2GM$ a infinito, usando el cambio de variables
     r^*=r+2GM\ln\left(\dfrac{r}{2GM}-1\right),
 \end{equation}
 donde $r^*$ se conoce como la \textcolor{red}{coordenada tortuga} de $r$, donde en $r\rightarrow 2GM$, $r^* \rightarrow +\infty$. Las coordenadas modifican los conos de luz manteniendolos constantes:
-\begin{figure}[h]
+\begin{figure}[H]
+    \begin{adjustwidth}{0pt}{-100pt}
     \begin{center}
         \includegraphics[scale=0.5]{img/imgRG6.3.PNG}
         \caption{Conos de luz en coordenadas tortuga.}
     \end{center}
+    \end{adjustwidth}
 \end{figure}
 
 \begin{equation}
@@ -110,16 +128,18 @@ donde esta coordenada asume que la coordenada $r^*$ es válida en ambos lados de
 
 En esta coordenada $r^* \in (-\infty, +\infty)$ fuera del horizonte y $r^* \in (-\infty, 0)$ dentro del horizonte y la singularidad $r=0$ está en $r^*=0$. Las geodésicas nulas $r^+$ fuera del horizonte satisfacen:
 
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}{0.6\textwidth}
     \begin{align}
         v&=2r+4GM\ln\left|\dfrac{r}{2GM}-1\right|+C \tag{$r^+$}\\
         v&=C \tag{$r^-$}
     \end{align}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
+    \begin{adjustwidth}{20pt}{-60pt}
     \begin{center}
         \includegraphics[scale=0.3]{img/imgRG6.4.PNG}
     \end{center}
+    \end{adjustwidth}
 \end{minipage}
 
 Entonces los conos de luz en estas coordenadas son:
@@ -132,11 +152,13 @@ Entonces los conos de luz en estas coordenadas son:
     \right.
 \end{equation}
 
-\begin{figure}[h]
+\begin{figure}[H]
+    \begin{adjustwidth}{0pt}{-100pt}
     \begin{center}
         \includegraphics[scale=0.4]{img/imgRG6.5.PNG}
         \caption{Conos de luz en coordenadas Eddington-Finkelstein}
     \end{center}
+    \end{adjustwidth}
 \end{figure}
 
 Nótese que:
@@ -159,11 +181,13 @@ esto es $t^*=v-r$, usando la definición de $v$ tenemos que:
     \end{array}
     \right.
 \end{equation}
-\begin{figure}[h]
+\begin{figure}[H]
+    \begin{adjustwidth}{0pt}{-100pt}
     \begin{center}
         \includegraphics[scale=0.4]{img/imgRG6.6.PNG}
     \end{center}
     \caption{Diagrama de Finkelstein para $t^*=v-r$ (A), y para $t^*=v+r$ (B).}
+    \end{adjustwidth}
 \end{figure}
 Esta elección de coordenadas $t^*=v-r$ puede ser dada también para $t^*=v+r$, donde este caso corresponde a la inversiones temporal $t\rightarrow -t$. Donde al escoger
 \begin{equation}
@@ -216,18 +240,20 @@ la métrica de Rindler satisface:
     \mathrm{d}s^2=-\mathrm{d}T^2+\mathrm{d}X^2,\quad X\in (0, \infty), \quad -X< T < X
 \end{equation}
 reduciéndose a una métrica de Minkowski
-\begin{figure}[h]
+\begin{figure}[H]
+    \begin{adjustwidth}{0pt}{-100pt}
     \begin{center}
         \includegraphics[scale=0.4]{img/imgRG6.7.PNG}
         \caption{Espacio-tiempo cubierto por la métrica de Rindler.}
     \end{center}
+    \end{adjustwidth}
 \end{figure}
 
 Dado que para $t\rightarrow \pm \infty$ y $\rho \rightarrow 0$ vemos que el horizonte de eventos es una \textcolor{red}{superficie nula}.
 
 \textcolor{red}{Comentario:} Vemos que en general, como ocurre con observadores acelerados no todos los cambios de variable cubren todo el espacio-tiempo. Para el caso del espacio-tiempo de Schwarzschild las coordenadas de Kruskal resuelven este problema.
 
-\section{Campos escalares en la geometría de Schwarzschild}
+\section{Campos escalares en la geometría de Schwarzschild}\label{part6.2}
 
 La acción de un campo escalar libre sin masa viene dada por:
 \begin{equation}
@@ -263,10 +289,12 @@ Notamos que para $\phi=e^{-i\omega t}\psi(r^*)$, obtenemos:
     -\partial^2_{r^*}\psi_{lm}+V_e(r^*)\psi_{lm}=\omega^2 \psi_{lm}
 \end{equation}
 que nos da una ecuación de tipo Schrödinger. Esta ecuación junto con su equivalente para vectores y tensores se conoce como las ecuaciones de Regge-Wheeler-Zerilli.
-\begin{figure}[h]
+\begin{figure}[H]
+    \begin{adjustwidth}{0pt}{-100pt}
     \centering
     \includegraphics[scale=0.5]{img/imgRG6.8.PNG}
     \caption{Potencial de Regge-Wheeler para un campo escalar en la métrica de Schwarzschild.}
+    \end{adjustwidth}
 \end{figure}
 
 \subsection{Coordenadas de Kruskal}
@@ -331,10 +359,12 @@ Por lo tanto la métrica:
 
 \subsection{Diagrama de Kruskal}
 
-\begin{figure}[h]
+\begin{figure}[H]
+    \begin{adjustwidth}{0pt}{-100pt}
     \centering
     \includegraphics[scale=0.5]{img/imgRG6.9.PNG}
     \caption{Diagrama de Kruskal para el agujero negro de Schwarzschild.}
+    \end{adjustwidth}
 \end{figure}
 
 En este diagrama tenemos:
@@ -364,7 +394,7 @@ En este diagrama tenemos:
     \item Existe un \textcolor{red}{agujero de gusano} que ``conecta'' la región I y IV pero con distancias space-like(no se puede cruzar). Esto también se llama \textcolor{red}{puente de Einstein-Rosen.}
 \end{enumerate}
 
-\section{Diagramas de Penrose}
+\section{Diagramas de Penrose}\label{part6.3}
 
 Son representaciones compactas de espacios-tiempo.
 
@@ -390,10 +420,12 @@ en estas coordenadas tenemos:
     \mathrm{d}s^2=-\dfrac{1}{\cos^2 \bar{u} \cos^2 \bar{v}}\mathrm{d}\bar{u}\mathrm{d}\bar{v}
 \end{equation}
 y notamos que los conos de luz se mantienen y $\cos^2 \bar{u} \cos^2 \bar{v}$ es un factor \textcolor{red}{conformal} para Minkowski tenemos:
-\begin{figure}[h]
+\begin{figure}[H]
+    \begin{adjustwidth}{0pt}{-100pt}
     \centering
     \includegraphics[scale=0.4]{img/imgRG6.10.PNG}
     \caption{Diagrama de Penrose para el espacio-tiempo de Minkowski en 2D.}
+    \end{adjustwidth}
 \end{figure}
 
 En este diagrama tenemos:
@@ -430,16 +462,18 @@ Esto limita los valores de $\bar{u}$ y $\bar{v}$
 \begin{equation}
     -\dfrac{\pi}{2}\leq \bar{u} \leq \bar{v} \leq \dfrac{\pi}{2}
 \end{equation}
-\begin{figure}[h]
+\begin{figure}[H]
     \begin{minipage}{0.6\textwidth}
         \centering
             \includegraphics[scale=0.5]{img/imgRG6.11.PNG}
             \caption{Diagrama de Penrose para Minkowski en $3+1$.}
     \end{minipage}
-    \begin{minipage}{0.4\textwidth}
+    \begin{minipage}{0.3\textwidth}
+        \begin{adjustwidth}{20pt}{-80pt}    
         En $r=0$, los rayos de luz son reflejados hacia el futuro de las geodésicas nulas $\mathcal{J}^+$.
         \\
         Esto pasa por constricción (es decir $r\geq 0$).
+        \end{adjustwidth}
     \end{minipage}
 \end{figure}
 
@@ -465,13 +499,15 @@ la singularidad en $r=0$, $uv=1$ está dada en:
         \cos(\bar{u}+\bar{v})&=0,\quad \bar{u}+\bar{v}=\pm \dfrac{\pi}{2}
     \end{split}
 \end{equation}
-\begin{figure}[h]
+\begin{figure}[H]
+    \begin{adjustwidth}{0pt}{-100pt}
     \centering
     \includegraphics[scale=0.5]{img/imgRG6.12.PNG}
     \caption{Diagrama de Penrose para el agujero negro de Schwarzschild.}
+    \end{adjustwidth}
 \end{figure}
 
-\section{Agujeros negros cargados}
+\section{Agujeros negros cargados}\label{part6.4}
 
 Esta solución de agujero negro viene dada por la acción:
 \begin{equation}
@@ -515,17 +551,21 @@ Notamos que existen \textcolor{red}{dos horizontes} $r^+$ y $r^-$, dependiendo d
 \begin{itemize}
     \item \textcolor{blue}{$Q=0$:} $r^-=0$, $r^+=2GM$ el horizonte de eventos coincide con la singularidad. El horizonte $r^+$ corresponde con el horizonte de Schwarzschild.
     \item \textcolor{blue}{$|Q|>GM$:} No existe horizonte de eventos. La singularidad $r=0$ se llama \textcolor{red}{singularidad desnuda}. Estas singularidades no son físicas. La falta de singularidades de este tipo se llama \textcolor{red}{principio de censura cósmica} (en agujeros negros que rotan esta condición lleva a un límite en el momento angular del agujero negro).
-    \begin{figure}[h]
+    \begin{figure}[H]
+        \begin{adjustwidth}{0pt}{-100pt}
         \centering
         \includegraphics[scale=0.4]{img/imgRG6.13.PNG}
         \caption{Diagrama de Penrose para $|Q|>GM$.}
+        \end{adjustwidth}
     \end{figure}
     \item \textcolor{blue}{$|Q|<GM$:} En este caso tenemos dos horizontes $r^+$ y $r^-$, siendo ambas superficies nulas. La singularidad pasa a ser time-like, por lo tanto es posible evitarla.
 \end{itemize}
-\begin{figure}[h]
+\begin{figure}[H]
+    \begin{adjustwidth}{0pt}{-100pt}
     \centering
     \includegraphics[scale=0.55]{img/imgRG6.14.PNG}
     \caption{Diagrama conformal para un agujero negro cargado.}
+    \end{adjustwidth}
 \end{figure}
 
 \textcolor{red}{Nótese que:}
@@ -544,13 +584,15 @@ para $r=GM+\eta$ (cerca del horizonte) con $\eta<< GM$ es posible derivar:
 Esta métrica se conoce como métrica de Robinson-Berlotti $AdS_2 \ times S^2$ y tiene geometría \textcolor{red}{anti-DeSitter}.
 
 Para este agujero negro existen infinitas regiones extremas.
-\begin{figure}[h]
+\begin{figure}[H]
+    \begin{adjustwidth}{0pt}{-100pt}
     \centering
     \includegraphics[scale=0.4]{img/imgRG6.15.PNG}
     \caption{Diagrama conformal para el agujero negro cargado extremal.}
+    \end{adjustwidth}
 \end{figure}
 
-\section{Agujeros negros rotantes}
+\section{Agujeros negros rotantes}\label{part6.5}
 
 El agujero negro de Kerr viene dado por la métrica:
 \begin{equation}
@@ -611,27 +653,33 @@ Las coordenadas $(t, r, \theta, \phi)$ se conocen como \textcolor{blue}{coordena
             r^2+&a^2\cos^2 \theta=0 \ \rightarrow \ \underbrace{r=0 \ \text{y} \ \theta=\dfrac{\pi}{2}}_{\text{Anillo}}
         \end{split}
     \end{equation}
-    \begin{figure}[h]
+    \begin{figure}[H]
+        \begin{adjustwidth}{0pt}{-100pt}
         \centering
         \includegraphics[scale=0.5]{img/imgRG6.16.PNG}
         \caption{Agujero negro de Kerr horizontes y ergosfera.}
+        \end{adjustwidth}
     \end{figure}
 \end{enumerate}
 
-\section{Agujeros negros reales}
+\section{Agujeros negros reales}\label{part6.6}
 
 \textcolor{blue}{Estelares:} Son generados por el colapso gravitacional de una estrella con $M\geq 4 M_{\odot}$.
-\begin{figure}[h]
+\begin{figure}[H]
+    \begin{adjustwidth}{0pt}{-100pt}
     \centering
     \includegraphics[scale=0.45]{img/imgRG6.17.PNG}
     \caption{Diagrama de Penrose para el colapso gravitacional de una estrella.}
+    \end{adjustwidth}
 \end{figure}
 
 Nótese que la métrica adentro de la estrella corresponde a una solución diferente a la solución a las ecuaciones de Einstein en el vacío y que el colapso puede no ser homogéneo.
-\begin{figure}[h]
+\begin{figure}[H]
+    \begin{adjustwidth}{0pt}{-100pt}
     \centering
     \includegraphics[scale=0.35]{img/imgRG6.18.PNG}
     \caption{Colapso gravitacional con simetría esférica.}
+    \end{adjustwidth}
 \end{figure}
 
 En el gráfico anterior se describe el colapso de la materia y la formación de la singularidad.
@@ -652,7 +700,7 @@ La inconsistencia de estas condiciones y la necesidad de una singularidad fue de
     M \approx 1.4M_{\odot}
 \end{equation}
 
-\section{Teoremas para agujeros negros}
+\section{Teoremas para agujeros negros}\label{part6.7}
 
 En esta sección revisaremos algunos teoremas y condiciones involucrando agujeros negros:
 
@@ -691,7 +739,7 @@ En esta sección revisaremos algunos teoremas y condiciones involucrando agujero
 
 \teorema{} Asumiendo la condición de energía débil y el principio de censura cósmica, el área de un horizonte de eventos futuro en un espacio-tiempo asintóticamente plano no decrece.
 
-\section{Procesos en agujeros negros}
+\section{Procesos en agujeros negros}\label{part6.8}
 
 \subsection{Horizonte de Killing}
 
@@ -721,9 +769,11 @@ Un decaimiento de una partícula en esta región llevaria a un aumento en la ene
     p^{\mu}&=p^{\mu}_1+p^{\mu}_2 \\
     E&=E_1+E_2
 \end{align}
-\begin{figure}[h]
+\begin{figure}[H]
+    \begin{adjustwidth}{0pt}{-100pt}
     \centering
     \includegraphics[scale=0.5]{img/imgRG6.19.PNG}
+    \end{adjustwidth}
 \end{figure}
 
 Sí la partículas 1 permanece en la ergosfera $E_1$ puede ser negativa y $E_2$
@@ -923,4 +973,5 @@ donde $B_{\mu\nu}=\nabla_{\mu}u_{\nu}$ y $u_{\mu}$ es un vector tangente $u^2=\p
         \end{enumerate}
     \end{enumerate}
 \end{enumerate}
+\end{adjustwidth}
 \end{document}
