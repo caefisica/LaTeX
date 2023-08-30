@@ -1,6 +1,6 @@
 {
     "name": "NotasDeLaTeX",
-    "image": "ghcr.io/caefisica/latex:master",
+    "image": "ghcr.io/caefisica/devcontainers/latex-full:master",
     "customizations": {
         "vscode": {
             "extensions": [
